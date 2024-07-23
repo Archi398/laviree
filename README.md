@@ -1,2 +1,2 @@
 # laviree
-laviree shopify
+laviree
