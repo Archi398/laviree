@@ -4,13 +4,14 @@ const ItemList = () => {
   const [current, setCurrent] = useState(0);
 
   const slides = [
-    { src: '/img/artists/1.png', link: 'https://www.instagram.com/laviree_festival/p/Ct1rfJFtmO0/?img_index=1' },
+    { src: '/img/artists/1.png', link: ' https://www.instagram.com/laviree_festival/p/Cq8ojlTtYHV/?img_index=1' },
     { src: '/img/artists/2.png', link: 'https://www.instagram.com/laviree_festival/p/CtwhctVsJUE/?img_index=1' },
     { src: '/img/artists/3.png', link: 'https://www.instagram.com/laviree_festival/p/CtjDqg1NAUv/?img_index=1' },
     { src: '/img/artists/4.png', link: 'https://www.instagram.com/laviree_festival/p/CtcI3bztisp/?img_index=1' },
     { src: '/img/artists/5.png', link: 'https://www.instagram.com/laviree_festival/p/CtXCLg5N4wX/?img_index=1' },
     { src: '/img/artists/6.png', link: 'https://www.instagram.com/laviree_festival/p/CtKXJ5CrgbM/?img_index=1' },
     { src: '/img/artists/7.png', link: 'https://www.instagram.com/laviree_festival/p/CtFGQmiNIuC/?img_index=1' },
+    { src: '/img/artists/8.png', link: 'https://www.instagram.com/laviree_festival/p/Ct1rfJFtmO0/?img_index=1' },
   ];
   const prev = current > 0 ? current - 1 : slides.length - 1;
   const next = current < slides.length - 1 ? current + 1 : 0;
@@ -30,6 +31,7 @@ const ItemList = () => {
 
   return (
     <div className="items">
+      <h1 className='flex justify-center text-4xl font-bold' style={{ color: 'rgb(0, 255, 170)' }}>Artistes présent :</h1>
       {slides.map((slide, index) => (
         <div
           key={index}
