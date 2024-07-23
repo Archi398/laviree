@@ -18,16 +18,7 @@ export default function Navigation() {
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="md:w-1/6 flex items-center space-x-3 rtl:space-x-reverse">
-            {
-              false != null
-                ?
-                (
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                    Salut <span className="text-green-500">Archi</span> !</span>
-                )
-                :
-                (<></>)
-            }
+            
           </div>
           <div className="md:w-1/6 flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-end">
             <div className="hidden md:block">
@@ -64,7 +55,16 @@ export default function Navigation() {
                   className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${location.pathname === "/lightspeed" ? "text-blue-500" : "text-white"}`}
                   onClick={closeMenu}
                 >
-                  Lightspeed
+                  Essai 1 
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/letters"
+                  className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${location.pathname === "/letters" ? "text-blue-500" : "text-white"}`}
+                  onClick={closeMenu}
+                >
+                  Essai 2
                 </NavLink>
               </li>
               <li className="md:hidden">

@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -18,6 +20,72 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+canvas {
+  pointer-events: none;
+}
+
+
+.lightspeed-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: unset;
+  scroll-behavior: smooth;
+}
+
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensure the canvas is behind other elements */
+}
+
+.title-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure the title is above the canvas */
+}
+
+.carousel-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure it takes the full viewport height */
+  overflow: hidden;
+}
+
+.carousel-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.watermark-wrap {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.watermark-text {
+  display: inline-block;
+  font-size: 35vw;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-black);
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.05;
+  pointer-events: none;
 }

@@ -1,0 +1,24 @@
+.letters-container {
+  top: 0;
+  margin: 0;
+  background: -webkit-radial-gradient(center, ellipse cover, #111 10%, #333 90%);
+  position: absolute;
+  height: 100vh;
+}
+
+.letters-canvas {
+  display: block;
+  cursor: crosshair;
+}
+
+.letters-h2 {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #AAA;
+}
