@@ -13,8 +13,10 @@ const ItemList = () => {
     { src: '/img/artists/7.png', link: 'https://www.instagram.com/laviree_festival/p/CtFGQmiNIuC/?img_index=1' },
     { src: '/img/artists/8.png', link: 'https://www.instagram.com/laviree_festival/p/Ct1rfJFtmO0/?img_index=1' },
   ];
-  const prev = current > 0 ? current - 1 : slides.length - 1;
-  const next = current < slides.length - 1 ? current + 1 : 0;
+  const prev = (current - 1 + slides.length) % slides.length;
+  const prevprev = (current - 2 + slides.length) % slides.length;
+  const next = (current + 1) % slides.length;
+  const nextnext = (current + 2) % slides.length;
 
   const gotoPrev = () => setCurrent(prev);
   const gotoNext = () => setCurrent(next);
@@ -22,9 +24,9 @@ const ItemList = () => {
   const handleSlideClick = (slide, index) => {
     if (index === current) {
       window.open(slide.link, '_blank');
-    } else if (index === prev) {
+    } else if (index === prev || index === prevprev) {
       gotoPrev();
-    } else if (index === next) {
+    } else if (index === next || index === nextnext) {
       gotoNext();
     }
   };
@@ -32,15 +34,30 @@ const ItemList = () => {
   return (
     <div className="items">
       <h1 className='flex justify-center text-4xl font-bold' style={{ color: 'rgb(0, 255, 170)' }}>Artistes présent :</h1>
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`item ${current === index ? 'active' : ''} ${prev === index ? 'prev' : ''} ${next === index ? 'next' : ''}`}
-          onClick={() => handleSlideClick(slide, index)}
-        >
-          <img src={slide.src} alt={`Slide ${index}`} />
-        </div>
-      ))}
+      <div>
+        {slides.map((slide, index) => {
+          const classNames = [
+            'item',
+            current === index && 'active',
+            prev === index && 'prev',
+            next === index && 'next',
+            prevprev === index && 'prevprev',
+            nextnext === index && 'nextnext'
+          ].filter(Boolean).join(' ');
+
+          return (
+            <div
+              key={index}
+              className={classNames}
+              onClick={() => handleSlideClick(slide, index)}
+            >
+              <img src={slide.src} alt={`Slide ${index}`} />
+            </div>
+          );
+        })}
+        <div className="arrow-left" onClick={gotoPrev}></div>
+        <div className="arrow-right" onClick={gotoNext}></div>
+      </div>
     </div>
   );
 };
