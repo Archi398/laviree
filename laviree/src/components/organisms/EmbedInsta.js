@@ -16,7 +16,7 @@ const EmbedInsta = () => {
 
   return (
     <div>
-      <h1 className='flex justify-center text-4xl font-bold mb-4' style={{ color: 'rgb(0, 255, 170)' }}>Aftermovie :</h1>
+      <h1 className='flex justify-center text-4xl font-bold mb-4' style={{ color: 'rgb(0, 255, 170)' }}>Aftermovie 2023 :</h1>
       <blockquote
         className="instagram-media"
         data-instgrm-captioned
