@@ -47,13 +47,13 @@ const ItemList = () => {
     requestAnimationFrame(raf);
 
     const images = [
-      '/img/artists/1.png',
-      '/img/artists/2.png',
-      '/img/artists/3.png',
-      '/img/artists/4.png',
-      '/img/artists/5.png',
-      '/img/artists/6.png',
-      '/img/artists/7.png',
+      { src: '/img/artists/1.png', link: 'https://www.instagram.com/laviree_festival/p/Ct1rfJFtmO0/?img_index=1' },
+      { src: '/img/artists/2.png', link: 'https://www.instagram.com/laviree_festival/p/CtwhctVsJUE/?img_index=1' },
+      { src: '/img/artists/3.png', link: 'https://www.instagram.com/laviree_festival/p/CtjDqg1NAUv/?img_index=1' },
+      { src: '/img/artists/4.png', link: 'https://www.instagram.com/laviree_festival/p/CtcI3bztisp/?img_index=1' },
+      { src: '/img/artists/5.png', link: 'https://www.instagram.com/laviree_festival/p/CtXCLg5N4wX/?img_index=1' },
+      { src: '/img/artists/6.png', link: 'https://www.instagram.com/laviree_festival/p/CtKXJ5CrgbM/?img_index=1' },
+      { src: '/img/artists/7.png', link: 'https://www.instagram.com/laviree_festival/p/CtFGQmiNIuC/?img_index=1' },
     ];
 
     gsap.timeline({
@@ -86,10 +86,11 @@ const ItemList = () => {
     camera.position.y = 0.3;
     camera.rotation.z = 2 * Math.PI * 0.01;
 
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
     const textureLoader = new THREE.TextureLoader();
-    images.unshift(images[images.length - 2], images[images.length - 1]);
-    images.splice(images.length - 2, 2);
-    const textures = images.map(image => textureLoader.load(image));
+    const textures = images.map(image => textureLoader.load(image.src));
 
     const geometry = new THREE.PlaneGeometry(1, 0.75, 10, 10);
     const uOffset = new THREE.Vector2(0, 0);
@@ -135,6 +136,7 @@ const ItemList = () => {
           `
         })
       );
+      mesh.userData.link = images[i].link;
       items.push({ mesh, index: i });
       scene.add(mesh);
     }
@@ -144,9 +146,10 @@ const ItemList = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     const updateMeshes = () => {
-      const width = 1;
+      const width = window.innerWidth < 768 ? 0.75 : 1; // Adjust width for mobile screens
       const wholeWidth = items.length * width;
       items.forEach((item) => {
+        item.mesh.scale.set(width, width * 0.75, 1);
         item.mesh.position.x = ((width * item.index) - (st.progress * 10) + (42069 * wholeWidth)) % wholeWidth - 2 * width;
         item.mesh.rotation.y = 2 * Math.PI * 0.03;
       });
@@ -176,8 +179,26 @@ const ItemList = () => {
 
     window.addEventListener('resize', handleResize);
 
+    const onClick = (event) => {
+      const bounds = canvas.getBoundingClientRect();
+      mouse.x = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
+      mouse.y = -((event.clientY - bounds.top) / bounds.height) * 2 + 1;
+      raycaster.setFromCamera(mouse, camera);
+
+      const intersects = raycaster.intersectObjects(scene.children);
+      if (intersects.length > 0) {
+        const link = intersects[0].object.userData.link;
+        if (link) {
+          window.open(link, '_blank');
+        }
+      }
+    };
+
+    canvas.addEventListener('click', onClick);
+
     return () => {
       window.removeEventListener('resize', handleResize);
+      canvas.removeEventListener('click', onClick);
     };
   }, [dpr]);
 

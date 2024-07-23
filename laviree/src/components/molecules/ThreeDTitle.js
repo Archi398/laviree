@@ -8,9 +8,9 @@ const ThreeDTitle = () => {
   const lineHeight = 2.3;
 
   return (
-    <div style={{ height: '100%', width: '100%' }}>
-      <Canvas style={{ height: '100%', width: '100%' }} events={null}>
-        <PerspectiveCamera makeDefault position={[10, -5, 12]} fov={90} />
+    <div style={{ height: '50%', width: '100%' }}>
+      <Canvas>
+        <PerspectiveCamera makeDefault position={[10, -5, 12]} fov={40} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <directionalLight position={[-5, 5, 5]} intensity={1} />

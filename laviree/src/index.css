@@ -23,11 +23,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-canvas {
-  pointer-events: none;
-}
-
-
 .lightspeed-container {
   position: relative;
   height: 100vh;
