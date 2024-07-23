@@ -50,37 +50,59 @@ code {
   z-index: 1; /* Ensure the title is above the canvas */
 }
 
-.carousel-wrap {
+.items {
   position: relative;
   width: 100%;
   height: 100vh; /* Ensure it takes the full viewport height */
   overflow: hidden;
 }
 
-.carousel-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.watermark-wrap {
-  overflow: hidden;
+.items .item {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 50vw; /* Adjust the size based on viewport width */
+  height: 50vw; /* Maintain the aspect ratio */
+  max-width: 250px; /* Set a maximum size */
+  max-height: 250px; /* Set a maximum size */
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+} 
+
+.item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.watermark-text {
-  display: inline-block;
-  font-size: 35vw;
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-black);
-  line-height: 1;
-  text-transform: uppercase;
-  opacity: 0.05;
-  pointer-events: none;
+.item.active {
+  opacity: 1;
+  z-index: 99;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.item.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-125%, -50%);
+}
+
+.item.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(25%, -50%);
+}
+
+.items .button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 275px;
+  z-index: 100;
 }
