@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'VIREE';
+  src: url('../assets/fonts/VIREE-Regular.otf') format('opentype');
+}
+
+.title{
+  font-family: 'VIREE', sans-serif;
+  color: #c38fbe;
+  font-size: 2rem;
+  margin: 5% 0;
+  text-transform: uppercase;
+}

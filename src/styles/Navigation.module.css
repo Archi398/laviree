@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'American Typewriter', serif;
+  margin-bottom: 30%;
+}
+
+.containerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5% 4%;
+  z-index: 1;
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+  background-color: black;
+}
+
+.containerNavFirstSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerNavSecondSection {
+  position: relative;
+}
+
+.containerNavLeftSection {
+  width: 50%;
+}
+
+.containerNavRightSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  right: 0;
+  z-index: 2;
+  min-width: 100%;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease-out;
+  background-color: black;
+}
+
+.dropdown.visible {
+  z-index: 3;
+  transform: scaleY(1);
+}
+
+.navLink {
+  text-decoration: none;
+  text-wrap: nowrap;
+  color: #c38fbe;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.navLinkDropdown {
+  text-decoration: none;
+  text-wrap: nowrap;
+  color: #fff;
+  font-size: 1rem;
+  margin: 5px;
+  text-align: end;
+}
+
+.navLink:hover,
+.navLinkDropdown:hover {
+  color: #c38fbe;
+  transition: 0.7s;
+}
+
+.btnTickets {
+  position: absolute;
+  right: auto;
+  top: 7px;
+  background-color: #c38fbe;
+  border: 2px white solid;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.containerSocialNetworks {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSocialNetworks {
+  background-color: #c38fbe;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.btnSocialNetworks svg {
+  width: 60%;
+  height: 60%;
+  fill: white;
+}
+
+@media (min-width: 768px) {
+  .containerNav {
+    padding: 10px 20%;
+  }
+}
