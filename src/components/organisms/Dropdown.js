@@ -24,9 +24,14 @@ const Dropdown = ({ label, links, visible, toggleDropdown }) => {
         {label}
       </span>
       <div className={`${styles.dropdown} ${visible ? styles.visible : ''}`}>
-        <hr style={{ border: '1px solid #c38fbe', width: '100%', margin: '0' }} />
+        <hr style={{ border: '1px solid var(--pink-viree)', width: '100%', margin: '0' }} />
         {links.map((link, index) => (
-          <NavLink key={index} className={styles.navLinkDropdown} to={link.path}>
+          <NavLink
+            key={index}
+            className={styles.navLinkDropdown}
+            to={link.path}
+            onClick={() => toggleDropdown(false)}
+          >
             {link.label}
           </NavLink>
         ))}

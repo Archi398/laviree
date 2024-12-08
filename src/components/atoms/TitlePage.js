@@ -3,7 +3,7 @@ import styles from '../../styles/TitlePage.module.css';
 
 const TitlePage = ({ label }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <h1 className={styles.title}>{label}</h1>
     </div>
   );

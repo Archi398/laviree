@@ -70,7 +70,7 @@
 .navLink {
   text-decoration: none;
   text-wrap: nowrap;
-  color: #c38fbe;
+  color: var(--pink-viree);
   font-size: 1rem;
   padding-left: 10px;
 }
@@ -86,7 +86,7 @@
 
 .navLink:hover,
 .navLinkDropdown:hover {
-  color: #c38fbe;
+  color: var(--pink-viree);
   transition: 0.7s;
 }
 
@@ -94,14 +94,14 @@
   position: absolute;
   right: auto;
   top: 7px;
-  background-color: #c38fbe;
+  background-color: var(--pink-viree);
   border: 2px white solid;
   border-radius: 5px;
   color: white;
+  font-family: 'VIREE', sans-serif;
+  font-size: 12px;
   padding: 5px 20px;
   text-align: center;
-  font-size: 12px;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .btnSocialNetworks {
-  background-color: #c38fbe;
+  background-color: var(--pink-viree);
   border-radius: 50%;
   height: 40px;
   width: 40px;
