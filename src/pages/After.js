@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import Carousel from '../components/organisms/Carousel';
+import EmbedInsta from '../components/organisms/EmbedInsta';
+import Portraits from '../components/organisms/Portraits';
 import styles from '../styles/After.module.css';
 
 export default function After() {
@@ -10,18 +12,25 @@ export default function After() {
     'https://via.placeholder.com/600x400?text=Slide+3',
   ];
 
-  const imagesPortraits = [
-    'https://via.placeholder.com/150?text=Portrait+1',
-    'https://via.placeholder.com/150?text=Portrait+2',
-    'https://via.placeholder.com/150?text=Portrait+3',
-    'https://via.placeholder.com/150?text=Portrait+4',
+  const portraits = [
+    {
+      src: 'https://via.placeholder.com/150?text=Portrait+1',
+      legend: 'This is a legend for image 1',
+    },
+    {
+      src: 'https://via.placeholder.com/150?text=Portrait+2',
+      legend: 'This is a legend for image 2',
+    },
+    {
+      src: 'https://via.placeholder.com/150?text=Portrait+3',
+      legend: 'This is a legend for image 3',
+    },
+    {
+      src: 'https://via.placeholder.com/150?text=Portrait+4',
+      legend: 'This is a legend for image 4',
+    },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleClick = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
 
   return (
     <div className={styles.container}>
@@ -36,21 +45,11 @@ export default function After() {
         <Carousel imgs={imagesCarousel} />
       </div>
       <TitlePage label="LEURS ACTUALITÉS" />
-      <TitlePage label="@BTK" />
+      <EmbedInsta />
       <TitlePage label="FESTIVAL" />
       <TitlePage label="PORTRAITS (LIEN SUR SHOTGUN PRIMITIV)" />
-      <div className={styles.containerPortraits}>
-        {imagesPortraits.map((src, index) => (
-          <div key={index} className={styles.portraitContainer} onClick={() => handleClick(index)}>
-            <img src={src} alt={`placeholder ${index}`} className={styles.portraitImg} />
-            {activeIndex === index && (
-              <div className={styles.legend}>
-                <p>This is a legend for image {index + 1}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+
+      <Portraits portraits={portraits} />
     </div>
   );
 }

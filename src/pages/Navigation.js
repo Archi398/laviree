@@ -18,8 +18,8 @@ export default function Navigation() {
   const dropdownLinks2 = [
     { path: '/artistes', label: 'nos artistes' },
     { path: '/edition/2023', label: 'édition 2023' },
-    { path: '/edition/2023', label: 'édition 2022' },
-    { path: '/edition/2023', label: 'édition 2021' },
+    { path: '/edition/2022', label: 'édition 2022' },
+    { path: '/edition/2021', label: 'édition 2021' },
   ];
 
   const dropdownLinks3 = [
@@ -33,7 +33,7 @@ export default function Navigation() {
         <nav className={styles.containerNav}>
           <div className={styles.containerNavFirstSection}>
             <div className={styles.containerNavLeftSection}>
-              <h1>Navigation</h1>
+              <img src="/images/logo.png" alt="logo" className={styles.logo} />
             </div>
             <div className={styles.containerNavRightSection}>
               <Dropdown

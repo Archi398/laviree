@@ -3,6 +3,16 @@
   src: url('/src/assets/fonts/VIREE-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'MinionPro Regular';
+  src: url('/src/assets/fonts/MinionPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('/src/assets/fonts/AmericanTypewriter.ttc') format('truetype');
+}
+
 :root {
   --pink-viree: #c38fbe;
 }
