@@ -1,8 +1,31 @@
 .container {
+  padding-top: 8%;
+}
 
+.svgContainer {
+  position: relative;
   height: 2500px;
+  background-color: black;
+}
+
+.svgContainer svg{
+  background-color: black;
 }
 
 .svgPath {
-  position: fixed;
+  position: sticky;
+  top: 25%;
+}
+
+.svgText{
+  font-family: 'VIREE', sans-serif;
+  font-size: 0.35rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5% 20% 5%;
 }

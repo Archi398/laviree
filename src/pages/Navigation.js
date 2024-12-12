@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/Navigation.module.css';
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import Dropdown from '../components/organisms/Dropdown';
 
 export default function Navigation() {
@@ -33,7 +33,11 @@ export default function Navigation() {
         <nav className={styles.containerNav}>
           <div className={styles.containerNavFirstSection}>
             <div className={styles.containerNavLeftSection}>
-              <img src="/images/logo.png" alt="logo" className={styles.logo} />
+              <NavLink
+                to={'/'}
+              >
+                <img src="/images/logo.png" alt="logo" className={styles.logo} />
+              </NavLink>
             </div>
             <div className={styles.containerNavRightSection}>
               <Dropdown

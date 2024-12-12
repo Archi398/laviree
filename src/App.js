@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navigation from './pages/Navigation';
 import Home from './pages/Home';
@@ -13,11 +13,20 @@ import Edition from './pages/Edition';
 import Association from './pages/Association';
 import Equipe from './pages/Equipe';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
-
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
