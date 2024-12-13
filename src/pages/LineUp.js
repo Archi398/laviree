@@ -26,7 +26,7 @@ export default function LineUp() {
       const svgContainer = svgContainerRef.current;
       const svgContainerHeight = svgContainer.getBoundingClientRect().height;
       const scrollY = window.scrollY - svgContainer.offsetTop;
-      const scrollPercentage = Math.min(scrollY / (svgContainerHeight - window.innerHeight), 1);
+      const scrollPercentage = Math.max(0, Math.min(scrollY / (svgContainerHeight - window.innerHeight), 1));
 
       paths.forEach((path, index) => {
         const length = pathLengths[index];

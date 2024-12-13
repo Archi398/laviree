@@ -46,12 +46,14 @@ export default function Navigation() {
                 visible={dropdownVisible}
                 toggleDropdown={setDropdownVisible}
               />
+              <span className={styles.dropdwonSeparator}>|</span>
               <Dropdown
                 label="Archives"
                 links={dropdownLinks2}
                 visible={dropdownVisible2}
                 toggleDropdown={setDropdownVisible2}
               />
+              <span className={styles.dropdwonSeparator}>|</span>
               <Dropdown
                 label=" Qui sommes nous?"
                 links={dropdownLinks3}

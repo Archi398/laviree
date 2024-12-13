@@ -1,21 +1,19 @@
 .container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: 'American Typewriter', serif;
-  margin-bottom: 30%;
-}
-
-.containerNav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 5% 4%;
-  z-index: 1;
+  z-index: 3;
   box-sizing: border-box;
-  /* Include padding and border in the element's total width and height */
   background-color: black;
+  display: flex;
+  justify-content: center;
+  font-family: 'American Typewriter', serif;
+}
+
+.containerNav {
+  width: 100%;
 }
 
 .containerNavFirstSection {
@@ -46,6 +44,11 @@
   align-items: flex-end;
 }
 
+.dropdwonSeparator{
+  display: none;
+  color: var(--pink-viree);
+}
+
 .dropdownContainer {
   position: relative;
   display: flex;
@@ -60,7 +63,7 @@
   flex-direction: column;
   top: 100%;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   min-width: 100%;
   overflow: hidden;
   transform: scaleY(0);
@@ -70,7 +73,7 @@
 }
 
 .dropdown.visible {
-  z-index: 3;
+  z-index: 5;
   transform: scaleY(1);
 }
 
@@ -79,7 +82,6 @@
   text-wrap: nowrap;
   color: var(--pink-viree);
   font-size: 1rem;
-  padding-left: 10px;
 }
 
 .navLinkDropdown {
@@ -102,7 +104,7 @@
   right: auto;
   top: 7px;
   background-color: var(--pink-viree);
-  border: 2px white solid;
+  border: 1px white solid;
   border-radius: 5px;
   color: white;
   font-family: 'VIREE', sans-serif;
@@ -110,18 +112,20 @@
   padding: 5px 20px;
   text-align: center;
   cursor: pointer;
+  z-index: 4;
 }
 
 
 .containerSocialNetworks {
+  z-index: 1;
   position: fixed;
   bottom: 0;
-  z-index: 1;
   width: 100%;
   padding-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .btnSocialNetworks {
@@ -133,7 +137,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 0 10px;
 }
 
 .btnSocialNetworks svg {
@@ -143,11 +146,43 @@
 }
 
 @media (min-width: 768px) {
-  .containerNav {
-    padding: 10px 20%;
+  .container {
+    padding: 20px 3%;
+  }
+
+  .containerNavRightSection {
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+  }
+
+  .dropdwonSeparator{
+    display: block;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    padding: 0 15px;
   }
 
   .logo {
     width: auto;
   }
+
+  .btnTickets {
+    right: 15px;
+    top: -10px;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .containerSocialNetworks {
+    bottom: auto;
+    right: calc(3% + 15px);
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+  }
+
 }

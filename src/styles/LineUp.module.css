@@ -8,7 +8,7 @@
   background-color: black;
 }
 
-.svgContainer svg{
+.svgContainer svg {
   background-color: black;
 }
 
@@ -17,7 +17,7 @@
   top: 25%;
 }
 
-.svgText{
+.svgText {
   font-family: 'VIREE', sans-serif;
   font-size: 0.35rem;
 }
@@ -27,5 +27,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 5% 20% 5%;
+  padding: 0 5% 15% 5%;
+}
+
+@media (min-width: 768px) {
+  .svgContainer {
+    margin-right: 8%;
+  }
+
+  .cardContainer {
+    padding: 0 11% 5% 11%;
+  }
 }

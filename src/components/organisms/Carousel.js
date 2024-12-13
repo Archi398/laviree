@@ -14,7 +14,8 @@ const Carousel = ({ imgs }) => {
         autoPlay={true} // Enable autoplay
         interval={5000} // Set autoplay interval (in milliseconds)
         transitionTime={500} // Set slide animation time
-        centerSlidePercentage={100} // Set the width of the center slide
+        centerMode={true} // Enable center mode
+        // centerSlidePercentage={50} // Set the width of the center slide
       >
         {imgs.map((img, index) => (
           <div key={index}>

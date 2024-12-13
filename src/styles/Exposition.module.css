@@ -1,0 +1,58 @@
+.container {
+  padding-top: 8%;
+}
+
+.svgContainer {
+  position: relative;
+  height: 2500px;
+  background-color: black;
+}
+
+.svgContainer svg {
+  background-color: black;
+}
+
+.svgPath {
+  position: fixed;
+  top: 20%;
+}
+
+.circle {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.circle.visible {
+  visibility: visible;
+}
+
+.popup {
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  max-width: 60%;
+}
+
+.popup h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.popup p {
+  margin: 10px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    max-width: 35%;
+  }
+
+  .popup h1 {
+    font-size: 1.7rem;
+  }
+
+  .popup p {
+    font-size: 1.2rem;
+  }
+}

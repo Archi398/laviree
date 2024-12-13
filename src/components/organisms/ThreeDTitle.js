@@ -2,26 +2,29 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Text3D, OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
+import styles from '../../styles/ThreeDTitle.module.css';
 
 import VIREE_Regular from '../../assets/fonts/VIREE_Regular.json';
 // import minion from '../../assets/fonts/Minion Pro_Regular.json';
+// import Inter_Bold from '../../assets/fonts/Inter_Bold.json';
 
 const ThreeDTitle = () => {
   const lineHeight = 2.3;
+  const fov = window.matchMedia("(max-width: 768px)").matches ? 80 : 60;
 
   const Circle = ({ position }) => {
     const shape = new THREE.Shape();
     const innerRadius = 4.5;
     const outerRadius = 4.6;
-  
+
     // Define the smooth outer circle
     shape.absarc(0, 0, outerRadius, 0, Math.PI * 2, false);
-  
+
     // Define the smooth inner circle (hole)
     const hole = new THREE.Path();
     hole.absarc(0, 0, innerRadius, 0, Math.PI * 2, true);
     shape.holes.push(hole);
-  
+
     return (
       <mesh position={position}>
         <extrudeGeometry
@@ -41,26 +44,39 @@ const ThreeDTitle = () => {
 
   const WavyCircle = ({ position }) => {
     const segments = 128; // Higher value for smoother wave
-    const outerRadius = 4.3;
-    const innerRadius = 4.2;
-    const amplitude = 0.2; // Amplitude of the wave
-    const frequency = 5; // Frequency of the wave
-  
+    const outerRadius = 4.3; // Increased size
+    const innerRadius = 4.2; // Increased size
+    const frequency = 10; // Frequency of the wave
+    const amplitudeRange = { min: 0, max: 0.4 }; // Define range for random amplitudes
+
+    // Generate random amplitudes for each 10 waves
+    const randomAmplitudes = Array.from({ length: frequency }, () =>
+      Math.random() * (amplitudeRange.max - amplitudeRange.min) + amplitudeRange.min
+    );
+
+    // Function to get amplitude for a given angle
+    const getAmplitude = (angle) => {
+      const waveIndex = Math.floor((angle / (Math.PI * 2)) * frequency);
+      return randomAmplitudes[waveIndex % frequency];
+    };
+
     // Create the wavy outer shape
     const shape = new THREE.Shape();
     for (let i = 0; i <= segments; i++) {
       const angle = (i / segments) * Math.PI * 2;
-      const wave = Math.sin(angle * frequency) * amplitude; // Create wave effect
+      const amplitude = getAmplitude(angle);
+      const wave = Math.sin(angle * frequency) * amplitude;
       const x = (outerRadius + wave) * Math.cos(angle);
       const y = (outerRadius + wave) * Math.sin(angle);
       if (i === 0) shape.moveTo(x, y);
       else shape.lineTo(x, y);
     }
-  
+
     // Create the wavy inner hole
     const hole = new THREE.Path();
     for (let i = 0; i <= segments; i++) {
       const angle = (i / segments) * Math.PI * 2;
+      const amplitude = getAmplitude(angle);
       const wave = Math.sin(angle * frequency) * amplitude;
       const x = (innerRadius + wave) * Math.cos(angle);
       const y = (innerRadius + wave) * Math.sin(angle);
@@ -68,7 +84,7 @@ const ThreeDTitle = () => {
       else hole.lineTo(x, y);
     }
     shape.holes.push(hole);
-  
+
     return (
       <mesh position={position}>
         <extrudeGeometry
@@ -81,83 +97,63 @@ const ThreeDTitle = () => {
             },
           ]}
         />
-        <meshStandardMaterial attach="material" color="#c38fbe" />
+        <meshStandardMaterial
+          attach="material"
+          color="#c38fbe"
+          opacity={0.6} // Reduced opacity
+          transparent={true} // Allow transparency
+        />
       </mesh>
     );
   };
 
+  const StyledText = ({ text, position }) => (
+    <mesh position={position} scale={[1, 1, 1]}>
+      <Text3D
+        font={VIREE_Regular}
+        size={2}
+        height={0.5}
+        bevelEnabled={true}
+        bevelThickness={0.6}
+        bevelSize={0.1}
+        bevelSegments={5}
+        material={[
+          new THREE.MeshStandardMaterial({
+            color: '#ffffff',
+            side: THREE.DoubleSide
+          }),
+          new THREE.MeshStandardMaterial({
+            color: '#c38fbe',
+            side: THREE.DoubleSide
+          })
+        ]}
+      >
+        {text}
+      </Text3D>
+    </mesh>
+  );
+
   return (
-    <div style={{ height: '50%', width: '50%' }}>
-      <Canvas>
-        <PerspectiveCamera makeDefault position={[10, -5, 12]} fov={40} />
-        <ambientLight intensity={0.5} />
+    <div className={styles.container}>
+      <Canvas dpr={[1, 2]}>
+        <PerspectiveCamera makeDefault position={[5, -2, 12]} fov={fov} />
+        <ambientLight intensity={2} />
         <pointLight position={[10, 10, 10]} />
-        <directionalLight position={[-5, 5, 5]} intensity={1} />
-        <group position={[-2, -1, 0]} rotation={[0, -0.1, 0.1]}>
-          <mesh position={[0.5, lineHeight * 1.5, 0]} scale={[1, 1, 1]}>
-            <Text3D
-              font={VIREE_Regular}
-              size={2}
-              height={0.5}
-              bevelEnabled={true}
-              bevelThickness={0.4}
-              bevelSize={0.2}
-              bevelOffset={0}
-              bevelSegments={5}
-            >
-              LA
-              <meshStandardMaterial attach="material" color="#c38fbe" />
-            </Text3D>
-          </mesh>
-          <mesh position={[0, lineHeight * 0.5, 0]} scale={[1, 1, 1]}>
-            <Text3D
-              font={VIREE_Regular}
-              size={2}
-              height={0.5}
-              bevelEnabled={true}
-              bevelThickness={0.4}
-              bevelSize={0.2}
-              bevelOffset={0}
-              bevelSegments={5}
-            >
-              VI
-              <meshStandardMaterial attach="material" color="#c38fbe" />
-            </Text3D>
-          </mesh>
-          <mesh position={[0.5, lineHeight * -0.5, 0]} scale={[1, 1, 1]}>
-            <Text3D
-              font={VIREE_Regular}
-              size={2}
-              height={0.5}
-              bevelEnabled={true}
-              bevelThickness={0.4}
-              bevelSize={0.2}
-              bevelOffset={0}
-              bevelSegments={5}
-            >
-              RÉ
-              <meshStandardMaterial attach="material" color="#c38fbe" />
-            </Text3D>
-          </mesh>
-          <mesh position={[2.5, lineHeight * -1.5, 0]} scale={[1, 1, 1]}>
-            <Text3D
-              font={VIREE_Regular}
-              size={2}
-              height={0.5}
-              bevelEnabled={true}
-              bevelThickness={0.4}
-              bevelSize={0.2}
-              bevelOffset={0}
-              bevelSegments={5}
-            >
-              E
-              <meshStandardMaterial attach="material" color="#c38fbe" />
-            </Text3D>
-          </mesh>
+        <directionalLight position={[-5, 5, 5]} intensity={10} />
+        <group position={[-2.5, -2, 0]} rotation={[0, -0.1, 0.1]}>
+
+          <StyledText text="LA" position={[0.5, lineHeight * 1.5, 0]} />
+
+          <StyledText text="VI" position={[0, lineHeight * 0.5, 0]} />
+
+          <StyledText text="RÉ" position={[0.5, lineHeight * -0.5, 0]} />
+
+          <StyledText text="E" position={[2.5, lineHeight * -1.5, 0]} />
+
         </group>
 
-        <Circle position={[0.5, 0.5, -1]} />
-        <WavyCircle position={[0.5, 0.5, -1]} />
+        <Circle position={[-0.5, -1, -1]} />
+        <WavyCircle position={[-0.5, -1, -1]} />
 
         <OrbitControls />
       </Canvas>

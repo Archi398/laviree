@@ -537,7 +537,72 @@ export const editionsData = [
         image: 'https://via.placeholder.com/150?text=Portrait+34',
         instagram: 'https://www.instagram.com/archisbt/',
       },
-    ]
+    ],
+    exposition: {
+      horaires: ['10h', '18h'],
+      artistes: [
+        {
+          name: 'noé 1',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+1',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 2',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+2',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 3',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+3',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 4',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+4',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 5',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+5',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 6',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+6',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 7',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+7',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 8',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+8',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 9',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+9',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+        {
+          name: 'noé 10',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+          image: 'https://via.placeholder.com/150?text=Portrait+10',
+          instagram: 'https://www.instagram.com/archisbt/',
+        },
+      ],
+    },
   },
 
 ]

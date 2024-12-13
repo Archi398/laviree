@@ -3,12 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 5% 20% 5%;
+  padding: 30% 5% 15% 5%;
 }
 
-.containerCard{
+.containerCard {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   background-color: #fff;
   margin-bottom: 15%;
   padding: 8%;
@@ -17,7 +18,7 @@
   box-shadow: 10px 10px 0px 0px var(--pink-viree);
 }
 
-.containerLogo{
+.containerLogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +29,14 @@
   fill: var(--pink-viree);
 }
 
-.containerTitle{
+.containerTitleText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,9 +48,48 @@
   margin: 5% 0;
 }
 
-.containerInfos{
+.containerInfos {
   padding: 8%;
   border: 2px solid black;
   background-color: var(--pink-viree);
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 10% 11% 5% 11%;
+  }
+
+  .containerCard {
+    margin-bottom: 5%;
+    padding: 4%;
+    flex-direction: row;
+  }
+
+  .containerLogo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .containerLogo svg {
+    width: 50px;
+    max-width: none;
+  }
+
+  .containerTitleText {
+    justify-content: flex-start;
+  }
+
+  .containerTitle {
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+  }
+
+  .containerTitle h1 {
+    margin: 0;
+  }
+
+  .containerInfos {
+    padding: 3%;
+  }
+}

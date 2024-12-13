@@ -35,3 +35,20 @@
     opacity: 1;
   }
 }
+
+
+@media (min-width: 768px) {
+  .portraitImg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .portraitContainer {
+    width: 200px;
+    height: 200px;
+  }
+
+  .legend p {
+    margin-bottom: 8px;
+  }
+}

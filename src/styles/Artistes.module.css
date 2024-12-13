@@ -3,5 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 5% 20% 5%;
+  padding: 30% 5% 15% 5%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 10% 11% 5% 11%;
+  }
 }
