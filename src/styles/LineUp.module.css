@@ -15,6 +15,7 @@
 .svgPath {
   position: sticky;
   top: 25%;
+  height: 80vh;
 }
 
 .svgText {
