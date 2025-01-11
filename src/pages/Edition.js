@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import Carousel from '../components/organisms/Carousel';
 import PinkCard from '../components/organisms/PinkCard';
@@ -9,9 +9,6 @@ import { artistesData } from '../data/artistesData';
 export default function Edition({ year }) {
   const edition = editionsData.find((ed) => ed.year === year);
   const artistes = artistesData.filter((art) => art.editions.includes(year));
-
-  const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const renderSubTitle = (dates, place) => {
     const formattedDates = dates.map((date) => {
@@ -27,30 +24,10 @@ export default function Edition({ year }) {
   };
   const subTitle = edition ? renderSubTitle(edition.dates, edition.place) : '';
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/images?year=${year}`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const imagePaths = data.map((fileName) => `/images/editions/${year}/${fileName}`);
-        setImages(imagePaths);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching images:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchImages();
-  }, [year]);
-
   return (
     <div className={styles.container}>
       <TitlePage label={`édition ${year}`} subTitle={subTitle} />
-      {!loading && <Carousel imgs={images} />}
+      <Carousel imgs={edition ? edition.images : []} />
       <PinkCard
         type={'edition'}
         title="Les artistes"
