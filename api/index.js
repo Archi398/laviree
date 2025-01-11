@@ -1,3 +1,4 @@
+// filepath: /c:/Users/archi/Desktop/sites/laviree/laviree/api/index.js
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -9,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '..', 'build')));
 
 // API endpoint to list files in the images folder for a specific year
 app.get('/api/images', (req, res) => {
@@ -19,7 +20,7 @@ app.get('/api/images', (req, res) => {
     return res.status(400).json({ error: 'Year parameter is required' });
   }
 
-  const imagesDir = path.join(__dirname, `public/images/editions/${year}`);
+  const imagesDir = path.join(__dirname, '..', `public/images/editions/${year}`);
   console.log(`Images directory: ${imagesDir}`);
 
   fs.readdir(imagesDir, (err, files) => {
@@ -37,9 +38,11 @@ app.get('/api/images', (req, res) => {
 
 // Catch-all handler to serve the React app for any other requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app;
