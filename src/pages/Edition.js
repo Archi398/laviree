@@ -27,7 +27,7 @@ export default function Edition({ year }) {
   return (
     <div className={styles.container}>
       <TitlePage label={`édition ${year}`} subTitle={subTitle} />
-      <Carousel imgs={edition ? edition.images : []} />
+      <Carousel key={year} imgs={edition ? edition.images : []} />
       <PinkCard
         type={'edition'}
         title="Les artistes"
