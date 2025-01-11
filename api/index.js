@@ -1,26 +1,25 @@
-// filepath: /c:/Users/archi/Desktop/sites/laviree/laviree/api/index.js
 const express = require('express');
-const path = require('path');
 const fs = require('fs');
-const cors = require('cors');  // Import cors
-const app = express();
-const PORT = process.env.PORT || 5000;
+const path = require('path');
+const cors = require('cors');
 
-// Apply CORS middleware to allow requests from any origin
+const app = express();
+
+// Initialize CORS middleware
 app.use(cors());
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'build')));
-
-// API endpoint to list files in the images folder for a specific year
+// API handler for Vercel
 app.get('/api/images', (req, res) => {
-  const { year } = req.query; // Extract year from query parameter
+  console.log(`Request method: ${req.method}`);
+  console.log(`Request URL: ${req.url}`);
+
+  const { year } = req.query;
 
   if (!year) {
     return res.status(400).json({ error: 'Year parameter is required' });
   }
 
-  const imagesDir = path.join(__dirname, '..', `public/images/editions/${year}`);
+  const imagesDir = path.join(__dirname, '..', 'public', 'images', 'editions', year);
   console.log(`Images directory: ${imagesDir}`);
 
   fs.readdir(imagesDir, (err, files) => {
@@ -36,13 +35,11 @@ app.get('/api/images', (req, res) => {
   });
 });
 
-// Catch-all handler to serve the React app for any other requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+// Handle 404
+app.use((req, res) => {
+  console.log('Route not found');
+  res.status(404).send('Not Found');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
+// Export the handler to be used by Vercel
 module.exports = app;
