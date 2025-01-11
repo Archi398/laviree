@@ -6,6 +6,18 @@
   padding: 30% 5% 15% 5%;
 }
 
+.containerImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 19vh 11% 5% 11%;
