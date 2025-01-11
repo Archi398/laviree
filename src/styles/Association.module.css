@@ -6,8 +6,36 @@
   padding: 30% 5% 15% 5%;
 }
 
+.containerIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+
+.introImg {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
 @media (min-width: 768px) {
   .container {
-    padding: 10% 11% 5% 11%;
+    padding: 19vh 11% 5% 11%;
+  }
+
+  .containerIntro {
+    flex-direction: row;
+  }
+
+  .introText {
+    font-size: 1.3rem;
+  }
+
+  .introImg {
+    width: 200px;
+    height: 200px;
+    max-width: none;
+    padding: 0 60px;
   }
 }

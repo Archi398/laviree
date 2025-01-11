@@ -4,33 +4,16 @@ import Carousel from '../components/organisms/Carousel';
 import EmbedInsta from '../components/organisms/EmbedInsta';
 import Portraits from '../components/organisms/Portraits';
 import styles from '../styles/After.module.css';
+import { artistesData } from '../data/artistesData';
 
 export default function After() {
+  const artistes = artistesData.filter((art) => art.group === 'BTK').sort((a, b) => a.name.localeCompare(b.name));
+
   const imagesCarousel = [
     'https://via.placeholder.com/600x400?text=Slide+1',
     'https://via.placeholder.com/600x400?text=Slide+2',
     'https://via.placeholder.com/600x400?text=Slide+3',
   ];
-
-  const portraits = [
-    {
-      src: 'https://via.placeholder.com/150?text=Portrait+1',
-      legend: 'This is a legend for image 1',
-    },
-    {
-      src: 'https://via.placeholder.com/150?text=Portrait+2',
-      legend: 'This is a legend for image 2',
-    },
-    {
-      src: 'https://via.placeholder.com/150?text=Portrait+3',
-      legend: 'This is a legend for image 3',
-    },
-    {
-      src: 'https://via.placeholder.com/150?text=Portrait+4',
-      legend: 'This is a legend for image 4',
-    },
-  ];
-
 
   return (
     <div className={styles.container}>
@@ -44,12 +27,25 @@ export default function After() {
       <div className={styles.containerCarrousel}>
         <Carousel imgs={imagesCarousel} />
       </div>
-      <TitlePage label="LEURS ACTUALITÉS" />
-      <EmbedInsta />
-      <TitlePage label="FESTIVAL" />
-      <TitlePage label="PORTRAITS (LIEN SUR SHOTGUN PRIMITIV)" />
 
-      <Portraits portraits={portraits} />
+      <TitlePage label="PORTRAITS (LIEN SUR SHOTGUN PRIMITIV)" />
+      <Portraits portraits={artistes} />
+
+      <div className={styles.containerInfos}>
+        <div className={styles.containerInfosInside}>
+          <TitlePage label="Les actualités" />
+          <EmbedInsta idAccount="btk_house" />
+        </div>
+        <div className={styles.containerInfosInside}>
+          <TitlePage label="Le festival" />
+          <EmbedInsta idAccount="/ekotone_festival" />
+        </div>
+        <div className={styles.containerInfosInside}>
+          <TitlePage label="Les évènements" />
+          <EmbedInsta idAccount="primitivfr" />
+        </div>
+      </div>
+      
     </div>
   );
 }

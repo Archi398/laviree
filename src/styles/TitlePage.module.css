@@ -8,14 +8,14 @@
 .title {
   font-family: 'VIREE', sans-serif;
   color: var(--pink-viree);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: 0;
   text-transform: uppercase;
 }
 
 .subTitle{
   color: var(--pink-viree);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0;
   text-transform: uppercase;
   font-weight: 200;
@@ -27,6 +27,6 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 }

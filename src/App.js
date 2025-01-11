@@ -4,7 +4,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navigation from './pages/Navigation';
 import Home from './pages/Home';
-import InfoActu from './pages/InfoActu';
+import Infos from './pages/Infos';
+import Actulites from './pages/Actulites';
 import LineUp from './pages/LineUp';
 import Exposition from './pages/Exposition';
 import After from './pages/After';
@@ -30,7 +31,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          <Route path="/infos-actu" element={<InfoActu />} />
+          <Route path="/infos" element={<Infos />} />
+          <Route path="/actualites" element={<Actulites />} />
           <Route path="/line-up" element={<LineUp />} />
           <Route path="/exposition" element={<Exposition />} />
           <Route path="/after" element={<After />} />

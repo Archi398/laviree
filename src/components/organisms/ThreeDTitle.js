@@ -37,7 +37,7 @@ const ThreeDTitle = () => {
             },
           ]}
         />
-        <meshStandardMaterial attach="material" color="#c38fbe" metalness={0.3} roughness={0.5} />
+        <meshStandardMaterial attach="material" color="#fc8bf2" metalness={0.3} roughness={0.5} />
       </mesh>
     );
   };
@@ -99,7 +99,7 @@ const ThreeDTitle = () => {
         />
         <meshStandardMaterial
           attach="material"
-          color="#c38fbe"
+          color="#fc8bf2"
           opacity={0.6} // Reduced opacity
           transparent={true} // Allow transparency
         />
@@ -123,7 +123,7 @@ const ThreeDTitle = () => {
             side: THREE.DoubleSide
           }),
           new THREE.MeshStandardMaterial({
-            color: '#c38fbe',
+            color: '#fc8bf2',
             side: THREE.DoubleSide
           })
         ]}

@@ -12,8 +12,9 @@
 }
 
 .containerTitle h1 {
+  text-align: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 5% 0;
   text-transform: uppercase;
   font-weight: 200;
@@ -28,7 +29,7 @@
 .containerText h2 {
   font-family: 'VIREE', sans-serif;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 5% 0;
   text-transform: uppercase;
 }
@@ -41,12 +42,12 @@
 
 @media (min-width: 768px) {
   .containerTitle h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 2% 0;
   }
 
   .containerText h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 2% 0;
   }
 

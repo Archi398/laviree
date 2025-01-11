@@ -7,26 +7,32 @@
 }
 
 .containerCard {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background-color: #fff;
-  margin-bottom: 15%;
+  justify-content: space-between;
+  gap: 20px;
   padding: 8%;
-  color: black;
-  border: 2px solid var(--pink-viree);
-  box-shadow: 10px 10px 0px 0px var(--pink-viree);
+  color: white;
+}
+
+.containerContent {
+  padding: 10px;
+  display: flex;
+  border: 10px solid var(--pink-viree);
+  border-style: dotted;
+  border-radius: 20px;
 }
 
 .containerLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.containerLogo svg {
-  max-width: 30%;
-  fill: var(--pink-viree);
+.containerLogo img {
+  width: 50px;
+  max-width: none;
 }
 
 .containerTitleText {
@@ -37,42 +43,61 @@
 }
 
 .containerTitle {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .containerTitle h1 {
+  color: var(--pink-viree);
   font-family: 'VIREE', sans-serif;
-  font-size: 2rem;
-  margin: 5% 0;
+  font-size: 1.5rem;
+  margin: 0 0 5% 0;
+}
+
+.containerText h2 {
+  color: var(--pink-viree);
+  font-family: 'VIREE', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.containerText h2::before {
+  content: '→';
+  margin-right: 7px;
+  color: var(--pink-viree);
+  font-size: 1.2rem;
+}
+
+.containerText p {
+  margin-top: 0;  
 }
 
 .containerInfos {
   padding: 8%;
-  border: 2px solid black;
   background-color: var(--pink-viree);
+  border-radius: 20px;
+}
+
+.containerInfos h1 {
+  font-family: 'VIREE', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 5% 0;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 10% 11% 5% 11%;
+    padding: 19vh 11% 5% 11%;
   }
 
   .containerCard {
-    margin-bottom: 5%;
     padding: 4%;
     flex-direction: row;
   }
 
-  .containerLogo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .containerLogo svg {
-    width: 50px;
-    max-width: none;
+  .containerContent {
+    width: 75%;
   }
 
   .containerTitleText {
@@ -90,6 +115,7 @@
   }
 
   .containerInfos {
+    width: 25%;
     padding: 3%;
   }
 }

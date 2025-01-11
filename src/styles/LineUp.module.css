@@ -2,20 +2,20 @@
   padding-top: 8%;
 }
 
-.svgContainer {
+.allContainer {
   position: relative;
-  height: 2500px;
+  height: 3000px;
   background-color: black;
+}
+
+.svgContainer {
+  position: sticky;
+  top: 20%;
+  width: 100%;
 }
 
 .svgContainer svg {
   background-color: black;
-}
-
-.svgPath {
-  position: sticky;
-  top: 25%;
-  height: 80vh;
 }
 
 .svgText {
@@ -32,11 +32,15 @@
 }
 
 @media (min-width: 768px) {
-  .svgContainer {
+  .allContainer {
     margin-right: 8%;
   }
 
   .cardContainer {
     padding: 0 11% 5% 11%;
+  }
+
+  .svgPath {
+    height: 75vh;
   }
 }
