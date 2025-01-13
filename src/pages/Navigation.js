@@ -36,8 +36,11 @@ export default function Navigation() {
             <div className={styles.containerNavLeftSection}>
               <NavLink
                 to={'/'}
+                style={{ textDecoration: 'none' }} 
               >
-                <img src="/images/logo.png" alt="logo" className={styles.logo} />
+                {/* <img src="/images/logo.png" alt="logo" className={styles.logo} /> */}
+                <h1 className={styles.title} data-title="LA VIREÉ">LA VIREÉ</h1>
+                <h2 className={styles.subtitle}>FESTIVAL</h2>
               </NavLink>
             </div>
             <div className={styles.containerNavRightSection}>

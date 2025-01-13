@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  padding: 8% 0;
+  padding: 0 0 8% 0;
   color: white;
 }
 
@@ -87,7 +87,7 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: 19vh 11% 5% 11%;
+    padding: 17vh 11% 5% 11%;
   }
 
   .containerCard {

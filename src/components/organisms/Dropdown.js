@@ -1,14 +1,19 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../../styles/Navigation.module.css';
 
 const Dropdown = ({ label, links, visible, toggleDropdown }) => {
   const dropdownRef = useRef(null);
+  const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        toggleDropdown(false);
+        setClosing(true);
+        setTimeout(() => {
+          toggleDropdown(false);
+          setClosing(false);
+        }, 500);
       }
     };
 
@@ -23,13 +28,13 @@ const Dropdown = ({ label, links, visible, toggleDropdown }) => {
       <span className={styles.navLink} onClick={() => toggleDropdown(!visible)}>
         {label}
       </span>
-      <div className={`${styles.dropdown} ${visible ? styles.visible : ''}`}>
+      <div className={`${styles.dropdown} ${visible ? styles.visible : ''} ${closing ? styles.closing : ''}`}>
         <hr style={{ border: '1px solid var(--pink-viree)', width: '100%', margin: '0' }} />
         {links.map((link, index) => (
           <NavLink
             key={index}
-            className={styles.navLinkDropdown}
             to={link.path}
+            className={styles.navLinkDropdown}
             onClick={() => toggleDropdown(false)}
           >
             {link.label}

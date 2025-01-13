@@ -30,11 +30,42 @@
   width: 50%;
 }
 
-.logo {
-  width: 100%;
-  max-height: 100px;
-  height: auto;
-  object-fit: contain;
+.title {
+  font-family: 'VIREE', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+
+.title::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--pink-viree);
+  z-index: -1;
+  transform: translate(10px, 10px);
+  text-shadow:
+    -1px -1px 0 var(--pink-viree),
+    -2px -2px 0 var(--pink-viree),
+    -3px -3px 0 var(--pink-viree),
+    -4px -4px 0 var(--pink-viree),
+    -5px -5px 0 var(--pink-viree),
+    -6px -6px 0 var(--pink-viree),
+    -7px -7px 0 var(--pink-viree),
+    -8px -8px 0 var(--pink-viree),
+    -9px -9px 0 var(--pink-viree),
+    -10px -10px 0 var(--pink-viree);
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--pink-viree);
+  font-weight: 200;
+  margin: 0;
 }
 
 .containerNavRightSection {
@@ -42,6 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 10px;
 }
 
 .dropdwonSeparator {
@@ -68,13 +100,20 @@
   overflow: hidden;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, z-index 0.5s step-end;
   background-color: black;
 }
 
 .dropdown.visible {
   z-index: 5;
   transform: scaleY(1);
+  transition: transform 0.5s ease-out;
+}
+
+.dropdown.closing {
+  z-index: 3;
+  transform: scaleY(0);
+  transition: transform 0.5s ease-out, z-index 0.5s step-start;
 }
 
 .navLink {
@@ -153,7 +192,6 @@
 }
 
 @keyframes shake {
-
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
@@ -185,6 +223,15 @@
     flex-direction: row;
     justify-content: flex-end;
     font-size: 1.3rem;
+    margin-right: 15px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
   }
 
   .dropdwonSeparator {
@@ -193,7 +240,6 @@
 
   .navLink {
     font-size: 1.2rem;
-    padding: 0 15px;
   }
 
   .logo {

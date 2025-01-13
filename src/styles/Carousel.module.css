@@ -1,6 +1,9 @@
 .carouselContainer {
   width: 100%;
-  overflow: hidden;
+}
+
+.imagesContainer {
+  margin: 0 5px;
 }
 
 .images {
@@ -12,7 +15,6 @@
 @media (min-width: 768px) {
   .carouselContainer {
     width: 90%;
-    overflow: visible;
   }
 
   .images {
