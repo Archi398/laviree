@@ -39,7 +39,7 @@ export default function Navigation() {
                 style={{ textDecoration: 'none' }} 
               >
                 {/* <img src="/images/logo.png" alt="logo" className={styles.logo} /> */}
-                <h1 className={styles.title} data-title="LA VIREÉ">LA VIREÉ</h1>
+                <h1 className={styles.title} data-title="LA VIREE">LA VIR&#xE001;E</h1>
                 <h2 className={styles.subtitle}>FESTIVAL</h2>
               </NavLink>
             </div>
