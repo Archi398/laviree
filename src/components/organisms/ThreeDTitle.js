@@ -100,7 +100,7 @@ const ThreeDTitle = () => {
         <meshStandardMaterial
           attach="material"
           color="#fc8bf2"
-          opacity={0.6} // Reduced opacity
+          opacity={0.8} // Reduced opacity
           transparent={true} // Allow transparency
         />
       </mesh>

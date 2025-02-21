@@ -1,5 +1,6 @@
 import React from 'react';
 import ThreeDTitle from '../components/organisms/ThreeDTitle';
+import LogoGLFT from '../components/organisms/LogoGLFT';
 import styles from '../styles/Home.module.css';
 import { editionsData } from '../data/editionsData';
 
@@ -23,7 +24,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.containerThreedtitle}>
-        <ThreeDTitle />
+        <LogoGLFT />
       </div>
       <div className={styles.containerSlogan}>
         <span className={styles.slogan}>Il est temps de nous retrouver.</span>
