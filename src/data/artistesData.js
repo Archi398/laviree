@@ -10,20 +10,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/alfamartians.jpg',
-    instagram: null,
-  },
-  {
-    name: 'Dagarner',
-    type: 'musique',
-    genre: 'House',
-    group: null,
-    editions: [2021],
-    dates: [{
-      date: '',
-      hour: '',
-    }],
-    image: '/images/artistes/dagarner.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Mental & Mental',
@@ -36,7 +23,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/mental&mental.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Sein',
@@ -49,7 +36,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/sein.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Skob',
@@ -62,7 +49,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/skob.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Airgoat',
@@ -75,7 +62,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/airgoat.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Bry\'O',
@@ -88,7 +75,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/bryo.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Dealing For Dimes',
@@ -101,7 +88,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/dealingfordimes.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Léonight',
@@ -114,7 +101,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/leonight.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Scale 9',
@@ -127,7 +114,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/scale9.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Symon Says',
@@ -140,7 +127,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/symonsays.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Théo Goude',
@@ -153,7 +140,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/theogoude.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Alhena',
@@ -166,7 +153,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/alhena.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'David Posth-Kohler',
@@ -179,7 +166,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/david_posthkohler.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Djé Sawyer',
@@ -192,7 +179,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/dje_sawyer.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Ecila Duaner',
@@ -205,7 +192,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/ecila_duaner.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Entropie',
@@ -218,7 +205,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/entropie.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Imani Griffon',
@@ -231,7 +218,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/imani_griffon.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'K Lypso',
@@ -244,7 +231,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/klypso.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Kot',
@@ -257,7 +244,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/kot.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Lezedh',
@@ -270,7 +257,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/lezedh.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Lolita',
@@ -283,7 +270,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/lolita.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Lucile',
@@ -296,7 +283,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/lucile.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Mandelbro',
@@ -309,7 +296,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/mandelbro.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Noe777.JPG',
@@ -322,7 +309,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/noe777.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Paul',
@@ -335,7 +322,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/paul.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Plaisirama',
@@ -348,7 +335,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/plaisirama.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Radio @',
@@ -361,7 +348,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/radioa.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'String Platine',
@@ -374,7 +361,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/stringplatines.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Tixpo',
@@ -387,7 +374,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/tixpo.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Tsiriniaiana H. Irimboangy',
@@ -400,7 +387,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/tsiriniaianahirimboangy.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Zoldxx',
@@ -413,7 +400,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/zoldxx.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Sub 37',
@@ -426,7 +413,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/sub37.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Bartabass (BTK)',
@@ -439,7 +426,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/bartabass.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Idir (BTK)',
@@ -452,7 +439,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/idir.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Magicbud (BTK)',
@@ -465,7 +452,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/magicbud.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Sacul (BTK)',
@@ -478,7 +465,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/sacul.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Tela (BTK)',
@@ -491,7 +478,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/tela.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Yadlatek (BTK)',
@@ -504,7 +491,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/yadlatek.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Sarah Sey',
@@ -517,20 +504,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/sarah_sey.jpg',
-    instagram: null,
-  },
-  {
-    name: '000000016 (Flirt Collectif)',
-    type: 'musique',
-    genre: 'Breakbeat',
-    group: 'Flirt Collectif',
-    editions: [2022, 2023],
-    dates: [{
-      date: '',
-      hour: '',
-    }],
-    image: '/images/artistes/000000016.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Chaise (Second Degré)',
@@ -543,7 +517,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/chaise.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Eiyie (Flirt Collectif)',
@@ -556,7 +530,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/eiyie.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Løuzmi (BTK)',
@@ -569,7 +543,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/louzmi.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Astrowrong',
@@ -582,7 +556,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/astrowrong.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'La Place',
@@ -595,7 +569,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/laplace.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Micromatik',
@@ -608,7 +582,7 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/micromatik.jpg',
-    instagram: null,
+    link: null,
   },
   {
     name: 'Roméo Bisous',
@@ -621,6 +595,32 @@ export const artistesData = [
       hour: '',
     }],
     image: '/images/artistes/romeobisous.jpg',
-    instagram: null,
+    link: null,
+  },
+  {
+    name: 'Test Archi',
+    type: 'musique',
+    genre: 'Acid',
+    group: null,
+    editions: [2025],
+    dates: [{
+      date: '28/06/2025',
+      hour: '17h',
+    }],
+    image: '/images/artistes/romeobisous.jpg',
+    link: "https://www.instagram.com/laviree_festival/",
+  },
+  {
+    name: 'Test Archi 2',
+    type: 'musique',
+    genre: 'Acid',
+    group: null,
+    editions: [2025],
+    dates: [{
+      date: '29/06/2025',
+      hour: '15h',
+    }],
+    image: '/images/artistes/romeobisous.jpg',
+    link: "https://www.instagram.com/laviree_festival/",
   },
 ]

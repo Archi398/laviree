@@ -30,7 +30,7 @@ const EmbedInsta = ({ idAccount }) => {
   }, [isLoaded]);
 
   return (
-    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+    <div style={{ width: '100%', display: 'flex' }}>
       {isLoaded ? (
         <blockquote className="instagram-media" data-instgrm-permalink={`https://www.instagram.com/${idAccount}/`} data-instgrm-version="14">
           <a href={`https://www.instagram.com/${idAccount}/`}>Instagram Post</a>

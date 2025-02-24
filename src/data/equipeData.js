@@ -17,12 +17,12 @@ export const equipeData = [
   {
     name: 'Antoine',
     image: '/images/equipe/antoine.jpg',
-    job: ['Président', 'Fondateur'],
+    job: ['Président', 'Co-Fondateur'],
   },
   {
     name: 'Julien',
     image: '/images/equipe/julien.jpg',
-    job: ['Vice-président', 'Co-fondateur'],
+    job: ['Co-fondateur'],
   },
   {
     name: 'Sybil',
@@ -37,7 +37,7 @@ export const equipeData = [
   {
     name: 'Constant',
     image: '/images/equipe/constant.jpg',
-    job: ['Respo exposition'],
+    job: ['Scénographe'],
   },
   {
     name: 'Charlotte',
@@ -47,7 +47,7 @@ export const equipeData = [
   {
     name: 'Clara',
     image: '/images/equipe/clara.jpg',
-    job: ['Chargée de sub'],
+    job: ['Technicienne son'],
   },
   {
     name: 'Lise',
@@ -57,7 +57,7 @@ export const equipeData = [
   {
     name: 'Melissa',
     image: '/images/equipe/melissa.jpg',
-    job: ['Respo log'],
+    job: ['Respo logistique'],
   },
   {
     name: 'Mathis',
@@ -78,5 +78,22 @@ export const equipeData = [
     name: 'Hannah',
     image: '/images/equipe/hannah.jpg',
     job: ['Directrice artistique'],
+  },
+];
+export const mentionspecialData = [
+  {
+    name: 'Archibald',
+    image: '/images/equipe/archibald.jpg',
+    job: ['Développeur'],
+  },
+  {
+    name: 'Tina',
+    image: '/images/equipe/tina.jpg',
+    job: ['Co-fondatrice'],
+  },
+  {
+    name: 'Marguerite',
+    image: '/images/equipe/marguerite.jpg',
+    job: ['Typographe'],
   },
 ];

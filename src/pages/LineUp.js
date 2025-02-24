@@ -7,10 +7,11 @@ import { artistesData } from '../data/artistesData';
 export default function LineUp() {
   const edition = editionsData.find((ed) => ed.year === 2025);
   const artistes = artistesData.filter((art) => art.editions.includes(2025));
+  const nb_artistes = artistes.length; // 17 max
 
-  const pathRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]);
-  const textRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]);
-  const rectRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]);
+  const pathRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]);
+  const textRefs = useRef(Array(nb_artistes).fill().map(() => React.createRef()));
+  const rectRefs = useRef(Array(nb_artistes).fill().map(() => React.createRef()));
   const allContainerRef = useRef(null);
   const cardContainerRef = useRef(null);
 
@@ -36,7 +37,7 @@ export default function LineUp() {
 
       paths.forEach((path, index) => {
         const length = pathLengths[index];
-        const thresholds = [0, 0.23, 0.41, 0.76, 0.82, 0.87, 0.92];
+        const thresholds = [0, 0.23, 0.41, 0.76, 0.82, 0.87, 0.92, 0.93];
         const threshold = thresholds[index];
 
         if (scrollPercentage >= threshold) {
@@ -54,7 +55,7 @@ export default function LineUp() {
         }
       });
 
-      const visibilityThresholds = [0.13, 0.28, 0.39, 0.55, 0.99, 0.49, 0.95, 0.89, 0.91, 0.97, 0.93];
+      const visibilityThresholds = [0.13, 0.28, 0.39, 0.55, 0.99, 0.49, 0.55, 0.82, 0.92, 0.97, 0.93, 0.86, 0.94, 0.90, 0.98, 0.98, 0.98];
       textRefs.current.forEach((textRef, index) => {
         const rectRef = rectRefs.current[index];
         const visibilityThreshold = visibilityThresholds[index];
@@ -78,10 +79,10 @@ export default function LineUp() {
       textRefs.current.forEach((textRef, index) => {
         const rectRef = rectRefs.current[index];
         const textBBox = textRef.current.getBBox();
-        rectRef.current.setAttribute('x', textBBox.x);
-        rectRef.current.setAttribute('y', textBBox.y);
-        rectRef.current.setAttribute('width', textBBox.width);
-        rectRef.current.setAttribute('height', textBBox.height);
+        rectRef.current.setAttribute('x', textBBox.x - 1);
+        rectRef.current.setAttribute('y', textBBox.y - 1);
+        rectRef.current.setAttribute('width', textBBox.width + 2);
+        rectRef.current.setAttribute('height', textBBox.height + 2);
       });
     }, 0);
 
@@ -93,75 +94,101 @@ export default function LineUp() {
   return (
     <div className={styles.container}>
       <div className={styles.allContainer} ref={allContainerRef}>
-        <div className={styles.svgContainer}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 90" className={styles.svgPath}>
-            <path ref={pathRefs.current[0]} fill="none" stroke="white" strokeWidth="2" d="M0 0S39.6 8.32 36.98 22.56Q33.34 28.58 46.52 55.4C52.52 69.6 67.5 49.16 69.6 70.16 70.3 78.7 89.62 64.42 92.42 71.7 94.8 64.56 105.58 71.84 114.26 70.3 125.18 67.08 125.74 59.8 135.12 67.64 140.02 71.14 144.798 65.184 144.07 74.245" />
-            <rect ref={rectRefs.current[0]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[0]} x="14" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 1
-            </text>
-            <rect ref={rectRefs.current[1]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[1]} x="18" y="35" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 2
-            </text>
-            <rect ref={rectRefs.current[2]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[2]} x="16" y="55" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 3
-            </text>
-            <rect ref={rectRefs.current[3]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[3]} x="40" y="70" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 4
-            </text>
-            <rect ref={rectRefs.current[4]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[4]} x="113" y="80" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 5
-            </text>
-            <path ref={pathRefs.current[1]} fill="none" stroke="white" strokeWidth="2" d="M36.98 22.56C68.2 12.76 61.06 44.68 92.14 51.4 111.46 54.62 107.54 41.6 119.02 34.32 134.28 23.96 121.12 13.46 128.68 7.3" />
-            <rect ref={rectRefs.current[5]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[5]} x="60" y="42" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 6
-            </text>
-            <rect ref={rectRefs.current[6]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[6]} x="110" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 7
-            </text>
+        <div className={styles.allContainerSticky}>
 
-            <path ref={pathRefs.current[2]} fill="none" stroke="white" strokeWidth="2" d="M64.98 31.38C66.94 13.74 80.52 25.64 85.84 11.92" />
-            <rect ref={rectRefs.current[7]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[7]} x="60" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 8
-            </text>
+          <div className={styles.svgContainer}>
+            <div className={styles.svgPath}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90" >
+                <path ref={pathRefs.current[0]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M0 0S25.562-2.212 28.491 20.309Q30.902 51.082 46.52 55.4C54.753 58.86 65.512 51.989 67.846 65.989 70.3 78.7 89.62 64.42 92.42 71.7 94.8 64.56 105.58 71.84 112.307 69.232 120.862 66.121 120.473 60.029 135.251 66.38 145.362 70.399 147.436 58.732 154.436 63.918" />
+                <path ref={pathRefs.current[1]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M28.438 20.234C60.845.401 54.105 43.955 78.087 45.122 96.364 43.825 91.05 32.289 106.994 29.567 113.216 26.715 111.66 13.104 133.178 18.16" />
+                <path ref={pathRefs.current[2]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M56.567 25.289C61.104 10.642 79.252 22.308 86.511 9.475" />
+                <path ref={pathRefs.current[3]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M68.623 16.864C79.122 29.697 80.548 15.567 91.048 24.252" />
+                <path ref={pathRefs.current[4]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M94.938 36.437C106.605 46.937 111.79 36.048 118.531 40.326S130.586 25.678 141.734 37.215" />
+                <path ref={pathRefs.current[5]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M103.363 69.232C106.733 55.751 118.918 63.01 124.233 52.77" />
+                <path ref={pathRefs.current[6]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M117.363 66.64C118.4 76.232 129.289 69.362 135.122 79.214" />
+                <path ref={pathRefs.current[7]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M92.421 71.701C93.901 78.952 86.771 73.508 92.121 93.07" />
 
-            <path ref={pathRefs.current[3]} fill="none" stroke="white" strokeWidth="2" d="M76.6 20.04C76.18 32.92 90.265 16.072 91.803 26.671" />
-            <rect ref={rectRefs.current[8]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[8]} x="83" y="30" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 9
-            </text>
+                <rect ref={rectRefs.current[0]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[0]} x="14" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[0]?.link, '_blank')}>
+                  {artistes[0]?.name}
+                </text>
+                <rect ref={rectRefs.current[1]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[1]} x="18" y="35" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[1]?.link, '_blank')}>
+                  {artistes[1]?.name}
+                </text>
+                <rect ref={rectRefs.current[2]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[2]} x="26" y="51" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[2]?.link, '_blank')}>
+                  {artistes[2]?.name}
+                </text>
+                <rect ref={rectRefs.current[3]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[3]} x="58" y="66" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[3]?.link, '_blank')}>
+                  {artistes[3]?.name}
+                </text>
+                <rect ref={rectRefs.current[4]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[4]} x="145" y="65" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[4]?.link, '_blank')}>
+                  {artistes[4]?.name}
+                </text>
+                <rect ref={rectRefs.current[5]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[5]} x="48" y="28" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[5]?.link, '_blank')}>
+                  {artistes[5]?.name}
+                </text>
+                <rect ref={rectRefs.current[6]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[6]} x="70" y="47" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[6]?.link, '_blank')}>
+                  {artistes[6]?.name}
+                </text>
+                <rect ref={rectRefs.current[7]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[7]} x="108" y="26" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[7]?.link, '_blank')}>
+                  {artistes[7]?.name}
+                </text>
+                <rect ref={rectRefs.current[8]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[8]} x="135" y="20" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[8]?.link, '_blank')}>
+                  {artistes[8]?.name}
+                </text>
+                <rect ref={rectRefs.current[9]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[9]} x="80" y="26" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[9]?.link, '_blank')}>
+                  {artistes[9]?.name}
+                </text>
+                <rect ref={rectRefs.current[10]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[10]} x="78" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[10]?.link, '_blank')}>
+                  {artistes[10]?.name}
+                </text>
+                <rect ref={rectRefs.current[11]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[11]} x="109" y="41" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[11]?.link, '_blank')}>
+                  {artistes[11]?.name}
+                </text>
+                <rect ref={rectRefs.current[12]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[12]} x="140" y="38" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[12]?.link, '_blank')}>
+                  {artistes[12]?.name}
+                </text>
+                <rect ref={rectRefs.current[13]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[13]} x="90" y="62" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[13]?.link, '_blank')}>
+                  {artistes[13]?.name}
+                </text>
+                <rect ref={rectRefs.current[14]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[14]} x="110" y="52" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[14]?.link, '_blank')}>
+                  {artistes[14]?.name}
+                </text>
+                <rect ref={rectRefs.current[15]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[15]} x="130" y="81" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[15]?.link, '_blank')}>
+                  {artistes[15]?.name}
+                </text>
+                <rect ref={rectRefs.current[16]} fill="black" style={{ visibility: 'hidden' }} />
+                <text ref={textRefs.current[16]} x="83" y="79" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[16]?.link, '_blank')}>
+                  {artistes[16]?.name}
+                </text>
 
-            <path ref={pathRefs.current[4]} fill="none" stroke="white" strokeWidth="2" d="M118.74 34.46C126.72 39.5 153.46 27.6 145.06 46.22" />
-            <rect ref={rectRefs.current[9]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[9]} x="120" y="50" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              art 10
-            </text>
+              </svg>
+            </div>
+          </div>
+          <div className={styles.cardContainer} ref={cardContainerRef}>
+            <PinkCard
+              type="lineUp"
+              title="Line up"
+              edition={edition ? edition : []}
+              artistes={artistes ? artistes : []}
+            />
+          </div>
 
-            <path ref={pathRefs.current[5]} fill="none" stroke="white" strokeWidth="2" d="M124.9 64.98C121.577 59.52 131.044 51.348 118.422 56.122" />
-            <rect ref={rectRefs.current[10]} fill="black" style={{ visibility: 'hidden' }} />
-            <text ref={textRefs.current[10]} x="85" y="60" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }}>
-              artiste 11
-            </text>
-
-            <path ref={pathRefs.current[6]} fill="none" stroke="white" strokeWidth="2" d="M92.421 71.701C93.683 86.599 74.593 74.969 75 90" />
-
-          </svg>
-        
-        <div className={styles.cardContainer} ref={cardContainerRef}>
-          <PinkCard
-            type="lineUp"
-            title="Line up"
-            edition={edition ? edition : []}
-            artistes={artistes ? artistes : []}
-          />
-        </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import styles from '../styles/Equipe.module.css';
-import { equipeData } from '../data/equipeData';
+import { equipeData, mentionspecialData } from '../data/equipeData';
 
 export default function Equipe() {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -14,8 +14,13 @@ export default function Equipe() {
       hidePopupTimeout.current = null;
     }
     const rect = event.target.getBoundingClientRect();
-    const top = rect.bottom + window.scrollY;
-    const left = rect.right + window.scrollX;
+    let top = rect.bottom + window.scrollY;
+    let left = rect.right + window.scrollX;
+
+    if (left + 200 > window.innerWidth) {
+      left = rect.left + window.scrollX;
+    }
+
     setPopupPosition({ top, left });
     setSelectedPerson(person);
   };
@@ -32,12 +37,31 @@ export default function Equipe() {
       <div className={styles.containerImages}>
         {equipeData.map((person, index) => (
           <div
-            className={styles.containerImage}
-            key={index}
+          className={styles.containerImage}
+          key={index}
+        >
+          <img
             onMouseEnter={(event) => handleMouseEnter(person, event)}
             onMouseLeave={handleMouseLeave}
+            src={person.image}
+            alt={person.name}
+            className={styles.img} />
+        </div>
+        ))}
+      </div>
+      <h2 className={styles.titleMention}>Mentions spéciales</h2>
+      <div className={styles.containerImages2}>
+        {mentionspecialData.map((person, index) => (
+          <div
+            className={styles.containerImage2}
+            key={index}
           >
-            <img src={person.image} alt={person.name} className={styles.img} />
+            <img
+              onMouseEnter={(event) => handleMouseEnter(person, event)}
+              onMouseLeave={handleMouseLeave}
+              src={person.image}
+              alt={person.name}
+              className={styles.img} />
           </div>
         ))}
       </div>

@@ -5,7 +5,8 @@ export default function PinkCardLineUp({ dates, artistes }) {
     const artistsForDate = artistes.filter(artist =>
       artist.dates.some(dateObj => dateObj.date === date)
     );
-    return artistsForDate.map((ar) => `${ar.name}, ${ar.hour}`).join(' * ');
+    console.log(artistsForDate);
+    return artistsForDate.map((ar) => `${ar.name}, ${ar.dates.find((dateObj) => dateObj.date === date).hour}`).join(' * ');
   };
 
   const formatDate = (dateString) => {

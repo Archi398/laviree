@@ -34,7 +34,7 @@ function App() {
           <Route path="/infos" element={<Infos />} />
           <Route path="/actualites" element={<Actulites />} />
           <Route path="/line-up" element={<LineUp />} />
-          <Route path="/exposition" element={<Exposition />} />
+          <Route path="/court-metrages" element={<Exposition />} />
           <Route path="/after" element={<After />} />
           <Route path="/artistes" element={<Artistes />} />
           <Route path="/edition/2023" element={<Edition year={2023} />} />

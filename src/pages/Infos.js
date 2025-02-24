@@ -24,7 +24,8 @@ export default function Infos() {
             En train
           </h2>
           <p>
-            Gare d'Argenton sur Creuse → 10 mn en navette
+            Gare d'Argenton sur Creuse (direct depuis Paris) <br />
+            Navette gratuite le vendredi et le dimanche —10mn
           </p>
         </div>
       ),
@@ -36,6 +37,67 @@ export default function Infos() {
           <p>
             Chateau de Célon <br />
             1 Rue du Château, 36200 Celon
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img style={{ maxWidth: "70%" }} src="/images/infoActuLogo/chateaudecelon.png" alt="Chateau de Celon" />
+          </div>
+        </div>
+      )
+    },
+    {
+      logo: (
+        <img src="/images/infoActuLogo/village.png" alt="village logo" />
+      ),
+      title: 'Village',
+      text: (
+        <div>
+          <h2>
+            Nourriture / Boissons
+          </h2>
+          <p>
+            Bar : ouvert 24h/24h. Bouilloires et micro-ondes mis à disposition <br />
+            Foodtrucks : végé et pas que
+          </p>
+          <h2>
+            Stands
+          </h2>
+          <p>
+            Friperie, jeux de société, artistes... à venir découvrir
+          </p>
+        </div>
+      ),
+      infos: (
+        <div>
+          <h1>
+            Le bar
+          </h1>
+          <p>
+            <span className={styles.dotLeaders}>
+              <span>Café</span>
+              <span className={styles.dots}></span>
+              <span>1€</span>
+            </span>
+            <span className={styles.dotLeaders}>
+              <span>Thé</span>
+              <span className={styles.dots}></span>
+              <span>1€</span>
+            </span>
+            <span className={styles.dotLeaders}>
+              <span>Eau</span>
+              <span className={styles.dots}></span>
+              <span>0€</span>
+            </span>
+            <br />
+            <span className={styles.dotLeaders}>
+              <span>Blonde (25cL)</span>
+              <span className={styles.dots}></span>
+              <span>2,5€</span>
+            </span>
+            <span className={styles.dotLeaders}>
+              <span>IPA (25cL)</span>
+              <span className={styles.dots}></span>
+              <span>3€</span>
+            </span>
           </p>
         </div>
       )
@@ -51,13 +113,13 @@ export default function Infos() {
             Services
           </h2>
           <p>
-            Des sanitaires (douches / WC), et points d'eau sont mis à disposition des festivaliers
+            Douches & WC
           </p>
           <h2>
             Déchets
           </h2>
           <p>
-            Des points de tris sont installés dans le camping et le parking. Le plastique à usage unique est à éviter au maximum. Ramenez vos écocups !
+            Pensez à minimiser vos emballages et à utiliser les points de tris
           </p>
         </div>
       ),
@@ -103,7 +165,9 @@ export default function Infos() {
             Secours
           </h1>
           <p>
-          Des bénévoles formés aux premiers secours seront sur place si besoin.
+            En cas de sentiment de danger ou d'insécurité, le bar est ouvert 24h/24h. Un.e membre de l'équipe sera là pour vous aider.
+            <br />
+            Une équipe de premiers secours sera présente.
           </p>
         </div>)
     },

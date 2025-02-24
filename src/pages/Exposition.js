@@ -3,11 +3,11 @@ import styles from '../styles/Exposition.module.css';
 import { artistesData } from '../data/artistesData';
 
 export default function Exposition() {
-  const artistes = artistesData.filter((art) => art.editions.includes(2023) && art.type === 'art'); // changer 2023 par 2025
+  const artistes = artistesData.filter((art) => art.editions.includes(2025) && art.type === 'art');
   const pathRef = useRef(null);
   const circleRefs = useRef([]);
   const popupRef = useRef(null);
-  const numCircles = artistes.length;
+  const numCircles = 1; // artistes.length;
   const [popup, setPopup] = useState({ visible: false, x: 0, y: 0, index: null });
   const hideTimeoutRef = useRef(null);
 
@@ -97,8 +97,8 @@ export default function Exposition() {
           onMouseEnter={() => clearTimeout(hideTimeoutRef.current)}
           onMouseLeave={handleHidePopup}
         >
-          <h1>{artistes[popup.index]?.name}</h1>
-          <p>{artistes[popup.index]?.description ?? 'Aperferibus, quo vehebata, se adet viderum patuscis, ut plicis erari plicia re publiam morum consulvirmis auciam quam. Git et patus constis nim inarei publis comnos, untie tateli, conium prarei patusularbem ducta te caeterium abendum noniquondam det vit pror ita, Ti. Erori, sci patus. Mihil ce'}</p>
+          <h1>{artistes[popup.index]?.name ?? "À venir"}</h1>
+          <p>{artistes[popup.index]?.description ?? 'À venir'}</p>
         </div>
       )}
     </div>

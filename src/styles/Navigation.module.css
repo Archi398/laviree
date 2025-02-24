@@ -36,6 +36,7 @@
   color: #ffffff;
   position: relative;
   display: inline-block;
+  text-wrap: nowrap;
   margin: 0 0 5px 0;
 }
 

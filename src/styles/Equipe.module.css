@@ -3,118 +3,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30% 5% 15% 5%;
+  padding: 140px 5% 15% 5%;
 }
 
 .containerImages {
-  position: relative;
-  height: 1600px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
 .containerImage {
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
-/* Félix */
-.containerImage:nth-child(1) {
-  top: -80px;
-  left: 30%;
+.containerImage:nth-child(odd) {
+  justify-content: flex-start;
 }
 
-/* Saturnin */
-.containerImage:nth-child(2) {
-  top: -40px;
-  left: 65%;
+.containerImage:nth-child(even) {
+  justify-content: flex-end;
 }
 
-/* Samuel */
-.containerImage:nth-child(3) {
-  top: 100px;
-  left: 0;
+.titleMention {
+  width: 100%;
+  font-weight: normal;
+  color: var(--pink-viree);
 }
 
-/* Antoine */
-.containerImage:nth-child(4) {
-  top: 200px;
-  left: 40%;
+.containerImages2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Julien */
-.containerImage:nth-child(5) {
-  top: 350px;
-  left: 12%;
+.containerImage2 {
+  display: flex;
+  width: 100%;
 }
 
-/* Sybil */
-.containerImage:nth-child(6) {
-  top: 250px;
-  left: 75%;
+.containerImage2:nth-child(odd) {
+  justify-content: flex-start;
 }
 
-/* Noé */
-.containerImage:nth-child(7) {
-  top: 600px;
-  left: 5%;
-}
-
-/* Constant */
-.containerImage:nth-child(8) {
-  top: 500px;
-  left: 40%;
-}
-
-/* Charlotte */
-.containerImage:nth-child(9) {
-  top: 550px;
-  left: 70%;
-}
-
-/* Clara */
-.containerImage:nth-child(10) {
-  top: 780px;
-  left: 38%;
-}
-
-/* Lise */
-.containerImage:nth-child(11) {
-  top: 850px;
-  left: 72%;
-}
-
-/* Melissa */
-.containerImage:nth-child(12) {
-  top: 900px;
-  left: 0;
-}
-
-/* Mathis */
-.containerImage:nth-child(13) {
-  top: 1050px;
-  left: 43%;
-}
-
-/* Matthis */
-.containerImage:nth-child(14) {
-  top: 1150px;
-  left: 75%;
-}
-
-/* Gustave */
-.containerImage:nth-child(15) {
-  top: 1200px;
-  left: 12%;
-}
-
-/* Hannah */
-.containerImage:nth-child(16) {
-  top: 1350px;
-  left: 48%;
+.containerImage2:nth-child(even) {
+  justify-content: flex-end;
 }
 
 .img {
@@ -147,6 +80,152 @@
 }
 
 @media (min-width: 768px) {
+  .containerImages {
+    position: relative;
+    height: 1600px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .containerImage {
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Félix */
+  .containerImage:nth-child(1) {
+    top: -80px;
+    left: 30%;
+  }
+
+  /* Saturnin */
+  .containerImage:nth-child(2) {
+    top: -40px;
+    left: 65%;
+  }
+
+  /* Samuel */
+  .containerImage:nth-child(3) {
+    top: 100px;
+    left: 0;
+  }
+
+  /* Antoine */
+  .containerImage:nth-child(4) {
+    top: 200px;
+    left: 40%;
+  }
+
+  /* Julien */
+  .containerImage:nth-child(5) {
+    top: 350px;
+    left: 12%;
+  }
+
+  /* Sybil */
+  .containerImage:nth-child(6) {
+    top: 250px;
+    left: 75%;
+  }
+
+  /* Noé */
+  .containerImage:nth-child(7) {
+    top: 600px;
+    left: 5%;
+  }
+
+  /* Constant */
+  .containerImage:nth-child(8) {
+    top: 500px;
+    left: 40%;
+  }
+
+  /* Charlotte */
+  .containerImage:nth-child(9) {
+    top: 550px;
+    left: 70%;
+  }
+
+  /* Clara */
+  .containerImage:nth-child(10) {
+    top: 780px;
+    left: 38%;
+  }
+
+  /* Lise */
+  .containerImage:nth-child(11) {
+    top: 850px;
+    left: 72%;
+  }
+
+  /* Melissa */
+  .containerImage:nth-child(12) {
+    top: 900px;
+    left: 0;
+  }
+
+  /* Mathis */
+  .containerImage:nth-child(13) {
+    top: 1050px;
+    left: 43%;
+  }
+
+  /* Matthis */
+  .containerImage:nth-child(14) {
+    top: 1150px;
+    left: 75%;
+  }
+
+  /* Gustave */
+  .containerImage:nth-child(15) {
+    top: 1200px;
+    left: 12%;
+  }
+
+  /* Hannah */
+  .containerImage:nth-child(16) {
+    top: 1350px;
+    left: 48%;
+  }
+
+  .containerImages2 {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .containerImage2 {
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Archibald */
+  .containerImage2:nth-child(1) {
+    top: 50px;
+    left: 15%;
+  }
+
+  /* Tina */
+  .containerImage2:nth-child(2) {
+    top: -50px;
+    left: 60%;
+  }
+
+  /* Marguerite */
+  .containerImage2:nth-child(3) {
+    top: 240px;
+    left: 42%;
+  }
+
   .img {
     max-width: 200px;
   }

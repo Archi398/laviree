@@ -3,13 +3,24 @@ import styles from '../../styles/Portraits.module.css';
 
 const Portraits = ({ portraits }) => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   const handleMouseEnter = (index) => {
-    setActiveIndex(index);
+    if (!isMobile) {
+      setActiveIndex(index);
+    }
   };
 
   const handleMouseLeave = () => {
-    setActiveIndex(null);
+    if (!isMobile) {
+      setActiveIndex(null);
+    }
+  };
+
+  const handleClick = (index) => {
+    if (isMobile) {
+      setActiveIndex(index === activeIndex ? null : index);
+    }
   };
 
   return (
@@ -18,7 +29,7 @@ const Portraits = ({ portraits }) => {
         <div
           key={index}
           className={styles.portraitContainer}
-          onClick={() => setActiveIndex(index === activeIndex ? null : index)}
+          onClick={() => handleClick(index)}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
         >
