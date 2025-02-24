@@ -1,9 +1,9 @@
 export const editionsData = [
   {
     year: 2021,
-    legend: '27-28-29 JUIN 2021 - MONASTÈRE the strokes',
-    dates: ['27/06/2021', '28/06/2021', '29/06/2021'],
-    place: 'Monastère the strokes',
+    legend: '02-03-04 JUILLET 2021 - Moulin Fontaine, Saint-Martin-le-Gaillard',
+    dates: ['02/07/2021', '03/07/2021', '04/07/2021'],
+    place: 'Moulin Fontaine, Saint-Martin-le-Gaillard',
     images: [
       '/images/editions/2021/208204150_560986818264966_6807349304840005615_n.jpg',
       '/images/editions/2021/209021532_231234925320637_835291380905520651_n.jpg',
@@ -39,9 +39,9 @@ export const editionsData = [
   },
   {
     year: 2022,
-    legend: '27-28-29 JUIN 2022 - MONASTÈRE jay reatard',
-    dates: ['27/06/2022', '28/06/2022', '29/06/2022'],
-    place: 'Monastère jay reatard',
+    legend: '01-02-03 JUILLET 2022 - Loup-Garou, Lezay',
+    dates: ['01/07/2022', '02/07/2022', '03/07/2022'],
+    place: 'Loup-Garou, Lezay',
     images: [
       '/images/editions/2022/1E66861A-45AD-4DFE-81AA-D314481C8D09_1_201_a.jpg',
       '/images/editions/2022/1268D6B1-7B1C-4F13-A6E5-0E40FDF4EC10.jpg',
@@ -93,9 +93,9 @@ export const editionsData = [
   },
   {
     year: 2023,
-    legend: '27-28-29 JUIN 2023 - MONASTÈRE blur',
-    dates: ['27/06/2023', '28/06/2023', '29/06/2023'],
-    place: 'Monastère blur',
+    legend: '30-01-02 JUILLET 2023 - Château Monastère de la Corroirie, Montrésor',
+    dates: ['30/06/2023', '01/07/2023', '02/07/2023'],
+    place: 'Château Monastère de la Corroirie, Montrésor',
     images: [
       '/images/editions/2023/DSC_5006.jpg',
       '/images/editions/2023/DSC_5113.jpg',
@@ -122,9 +122,9 @@ export const editionsData = [
   },
   {
     year: 2025,
-    legend: '27-28-29 JUIN 2025 - MONASTÈRE michael jackson',
+    legend: '27-28-29 JUIN 2025 - Chateau de Célon',
     dates: ['27/06/2025', '28/06/2025', '29/06/2025'],
-    place: 'Monastère michael jackson',
+    place: 'Chateau de Célon',
     images: [
 
     ],
