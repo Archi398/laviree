@@ -93,6 +93,10 @@
   margin: 0 0 5% 0;
 }
 
+.containerInfos a {
+  color: white;
+}
+
 .dotLeaders {
   display: flex;
   justify-content: space-between;

@@ -7,6 +7,43 @@ export default function Actulites() {
   const cards = [
     {
       logo: (
+        <img src="/images/infoActuLogo/concours.png" alt="concours logo" />
+      ),
+      title: 'Concours tremplin',
+      text: (
+        <div>
+          <p>
+            Le concours tremplin de La Virée Festival est ouvert aux artistes émergent.e.s de tous genres. Après une première sélection par les membres du collectif, les candidat.e.s retenu.e.s seront soumis.e.s au vote du public sur Instagram. <br />
+            Les 5 finalistes ayant obtenu le plus de votes se produiront en live lors de la finale au Hasard Ludique le samedi 5 avril 2025. <br />
+            Le/la gagnant.e sera désigné.e selon sa performance, son originalité et son interaction avec le public. À la clé, il/elle décrochera sa place pour venir performer lors de la 4ème édition du festival La Virée le 27-28-29 juin 2025.
+          </p>
+        </div>
+      ),
+      infos: (
+        <div>
+          <h1>
+            Infos
+          </h1>
+          <p>
+            <strong>
+              Envoyez vos candidatures avant le 05/03/2025 à 23h59
+              via le formulaire :
+            </strong>
+          </p>
+          <p>
+            <a href='https://docs.google.com/forms/d/1XGS6UBEKnZzVFokYK22wUvnRLGONU44TqRF4QLUGCvE/edit' target='_blank' rel='noreferrer'>
+              CLIQUEZ ICI
+            </a>
+          </p>
+          <p>
+            Retrouvez toutes les autres infos sur insta :
+            @laviree_festival
+          </p>
+        </div>
+      )
+    },
+{
+      logo: (
         <img src="/images/infoActuLogo/courtmetrage.png" alt="court métrage logo" />
       ),
       title: 'Appel à courts-métrages',
@@ -57,29 +94,6 @@ export default function Actulites() {
           </p>
           <p>
             Pensez à joindre une note de présentation ainsi que des documents visuels des productions (Titre / Contexte / Synopsis / Noms / Affiche / Photos de tournages / Storyboard / etc.)
-          </p>
-        </div>
-      )
-    },
-    {
-      logo: (
-        <img src="/images/infoActuLogo/concours.png" alt="concours logo" />
-      ),
-      title: 'Concours tremplin',
-      text: (
-        <div>
-          <p>
-
-          </p>
-        </div>
-      ),
-      infos: (
-        <div>
-          <h1>
-            Infos
-          </h1>
-          <p>
-            À venir
           </p>
         </div>
       )
