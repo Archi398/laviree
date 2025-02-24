@@ -598,7 +598,7 @@ export const artistesData = [
     link: null,
   },
   {
-    name: 'Test Archi',
+    name: 'Artiste à venir 1',
     type: 'musique',
     genre: 'Acid',
     group: null,
@@ -611,9 +611,9 @@ export const artistesData = [
     link: "https://www.instagram.com/laviree_festival/",
   },
   {
-    name: 'Test Archi 2',
+    name: 'Artiste à venir 1',
     type: 'musique',
-    genre: 'Acid',
+    genre: 'Rock',
     group: null,
     editions: [2025],
     dates: [{
