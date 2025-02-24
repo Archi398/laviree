@@ -611,7 +611,7 @@ export const artistesData = [
     link: "https://www.instagram.com/laviree_festival/",
   },
   {
-    name: 'Artiste à venir 1',
+    name: 'Artiste à venir 2',
     type: 'musique',
     genre: 'Rock',
     group: null,
