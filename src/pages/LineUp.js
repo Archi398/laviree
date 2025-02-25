@@ -99,14 +99,14 @@ export default function LineUp() {
           <div className={styles.svgContainer}>
             <div className={styles.svgPath}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90" >
-                <path ref={pathRefs.current[0]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M0 0S25.562-2.212 28.491 20.309Q30.902 51.082 46.52 55.4C54.753 58.86 65.512 51.989 67.846 65.989 70.3 78.7 89.62 64.42 92.42 71.7 94.8 64.56 105.58 71.84 112.307 69.232 120.862 66.121 120.473 60.029 135.251 66.38 145.362 70.399 147.436 58.732 154.436 63.918" />
-                <path ref={pathRefs.current[1]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M28.438 20.234C60.845.401 54.105 43.955 78.087 45.122 96.364 43.825 91.05 32.289 106.994 29.567 113.216 26.715 111.66 13.104 133.178 18.16" />
-                <path ref={pathRefs.current[2]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M56.567 25.289C61.104 10.642 79.252 22.308 86.511 9.475" />
-                <path ref={pathRefs.current[3]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M68.623 16.864C79.122 29.697 80.548 15.567 91.048 24.252" />
-                <path ref={pathRefs.current[4]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M94.938 36.437C106.605 46.937 111.79 36.048 118.531 40.326S130.586 25.678 141.734 37.215" />
-                <path ref={pathRefs.current[5]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M103.363 69.232C106.733 55.751 118.918 63.01 124.233 52.77" />
-                <path ref={pathRefs.current[6]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M117.363 66.64C118.4 76.232 129.289 69.362 135.122 79.214" />
-                <path ref={pathRefs.current[7]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="2" d="M92.421 71.701C93.901 78.952 86.771 73.508 92.121 93.07" />
+                <path ref={pathRefs.current[0]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M0 0S25.562-2.212 28.491 20.309Q30.902 51.082 46.52 55.4C54.753 58.86 65.512 51.989 67.846 65.989 70.3 78.7 89.62 64.42 92.42 71.7 94.8 64.56 105.58 71.84 112.307 69.232 120.862 66.121 120.473 60.029 135.251 66.38 145.362 70.399 147.436 58.732 154.436 63.918" />
+                <path ref={pathRefs.current[1]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M28.438 20.234C60.845.401 54.105 43.955 78.087 45.122 96.364 43.825 91.05 32.289 106.994 29.567 113.216 26.715 111.66 13.104 133.178 18.16" />
+                <path ref={pathRefs.current[2]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M56.567 25.289C61.104 10.642 79.252 22.308 86.511 9.475" />
+                <path ref={pathRefs.current[3]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M68.623 16.864C79.122 29.697 80.548 15.567 91.048 24.252" />
+                <path ref={pathRefs.current[4]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M94.938 36.437C106.605 46.937 111.79 36.048 118.531 40.326S130.586 25.678 141.734 37.215" />
+                <path ref={pathRefs.current[5]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M103.363 69.232C106.733 55.751 118.918 63.01 124.233 52.77" />
+                <path ref={pathRefs.current[6]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M117.363 66.64C118.4 76.232 129.289 69.362 135.122 79.214" />
+                <path ref={pathRefs.current[7]} fill="none" strokeLinejoin="round" stroke="white" strokeWidth="1" d="M92.421 71.701C93.901 78.952 86.771 73.508 92.121 93.07" />
 
                 <rect ref={rectRefs.current[0]} fill="black" style={{ visibility: 'hidden' }} />
                 <text ref={textRefs.current[0]} x="14" y="10" fill="white" className={styles.svgText} style={{ visibility: 'hidden' }} onClick={() => window.open(artistes[0]?.link, '_blank')}>
