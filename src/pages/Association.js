@@ -22,8 +22,9 @@ export default function Association() {
         <img src="/images/logo3D.png" alt="placeholder" className={styles.introImg} />
       </div>
       <PinkCard
-        type=""
+        type="association"
         title="CHARTE DE BIENVEILLANCE"
+        description="Bonjour me voici"
       />
     </div>
   );
