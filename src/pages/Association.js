@@ -24,7 +24,7 @@ export default function Association() {
       <PinkCard
         type="association"
         title="CHARTE DE BIENVEILLANCE"
-        description="Bonjour me voici"
+        description=""
       />
     </div>
   );

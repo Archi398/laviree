@@ -12,7 +12,7 @@ export default function Navigation() {
     { path: '/infos', label: 'infos' },
     { path: '/actualites', label: 'actualités' },
     { path: '/line-up', label: 'line up' },
-    { path: '/court-metrages', label: 'court-métrages' },
+    { path: '/courts-metrages', label: 'courts-métrages' },
     { path: '/after', label: 'l\'after • BTK' },
   ];
 

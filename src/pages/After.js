@@ -18,7 +18,11 @@ export default function After() {
       <TitlePage label="L'AFTER * BTK" />
       <div className={styles.containerIntro}>
         <p className={styles.introText}>
-          bonjour me voici 
+        Comment ne pas se faire embarquer par la folie de ce collectif ? Composé de 8 DJ, l’énergie débordante et l'excentricité de la BTK Family s’exprime sur scène dans une diversité musicale couvrant un large spectre de la scène électronique. 
+
+Une fois descendu de l’estrade, ne croyez pas que le show s’arrête ici. Pour eux la fête est une religion et si vous comptez les suivre, prévoyez vos meilleures lunettes de vitesse !
+
+Originaires du milieu free party, ils évoluent aujourd’hui dans la scène parisienne en organisant des soirées qui font trembler la capitale. 
         </p>
         <img src={afterBTK.logo} alt="placeholder" className={styles.introImg} />
       </div>
