@@ -7,6 +7,58 @@ export default function Actulites() {
   const cards = [
     {
       logo: (
+        <img src="/images/infoActuLogo/soiree.png" alt="soirée logo" />
+      ),
+      title: 'Soirée Tremplin au Hasard Ludique',
+      text: (
+        <div>
+          <p>
+          La Virée revient au Hasard Ludique le samedi 5 avril pour notre finale du concours tremplin. <br />
+          Les 5 artistes finalistes sélectionné·es se produiront sur scène et c’est vous qui aurez le dernier mot : votre vote déterminera qui jouera au festival La Virée du 27 au 29 juin. 
+          </p>
+          <h2>
+            Prends tes billets 
+          </h2>
+          <p>
+          <a href='https://shotgun.live/fr/events/la-viree?fbclid=PAZXh0bgNhZW0CMTEAAaZ9cj1WMNfXYq7M4RN_g4KiYmCr3c3DX_PAB5r2Gw9rFaNFjaBUs0_95Fs_aem_zqw2A4pwQd8pHG8i_78-6A' target='_blank' rel='noreferrer'>
+              Billetterie Shotgun 
+            </a>
+          </p>
+          <h2>
+            Line up  
+          </h2>
+          <p>
+            * +++ : Indie Rock <br />
+            * Après Garde : Post-Punk <br />
+            * Louga : Rap Electro <br />
+            * Nenasita : Pop Reggeaton <br />
+            * Sainte - Rim : Hip-hop alternatif, Électro et Pop Rock <br />
+          </p>
+        </div>
+      ),
+      infos: (
+        <div>
+          <h1>
+            Infos
+          </h1>
+          <p>
+            Le 5 avril 2025
+          </p>
+          <p>
+            <strong>
+              20h → 01h30
+            </strong>
+          </p>
+          <p>
+            Le Hasard Ludique <br />
+            128 Av. de Saint-Ouen, <br />
+            75018 Paris
+          </p>
+        </div>
+      )
+    },
+    {
+      logo: (
         <img src="/images/infoActuLogo/concours.png" alt="concours logo" />
       ),
       title: 'Concours tremplin',

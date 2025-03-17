@@ -18,11 +18,17 @@ export default function After() {
       <TitlePage label="L'AFTER * BTK" />
       <div className={styles.containerIntro}>
         <p className={styles.introText}>
-        Comment ne pas se faire embarquer par la folie de ce collectif ? Composé de 8 DJ, l’énergie débordante et l'excentricité de la BTK Family s’exprime sur scène dans une diversité musicale couvrant un large spectre de la scène électronique. 
+        BTK c'est une histoire d'amitié longue de 10 années aujourd'hui. Elle a commencé par une envie de liberté, celle de faire la fête où on le souhaite, quand on le souhaite. Dans cet élan fondateur, le collectif achète ses premiers caissons et se met à chercher un nom accrocheur. 
 
-Une fois descendu de l’estrade, ne croyez pas que le show s’arrête ici. Pour eux la fête est une religion et si vous comptez les suivre, prévoyez vos meilleures lunettes de vitesse !
+La Bistoutek Family était née, un nom choisi comme un pied de nez aux nombreux soundsystems finissant par ”TEK”, témoin de l’esprit bon enfant véhiculé et de l'auto dérision dont ils savent faire preuve.
 
-Originaires du milieu free party, ils évoluent aujourd’hui dans la scène parisienne en organisant des soirées qui font trembler la capitale. 
+Avec une volonté de conserver un cadre intimiste au sein de leurs événements, ils cultivent à travers leur direction artistique un esprit de tolérance et de partage. 
+
+Chaque artiste appartenant au crew se démarque par sa propre vision du mix. Et si vous n'êtes pas séduit par son style, vous ne serez jamais insensible à l'intention qu'il mettra dans chacune de ses performances.
+
+Aujourd’hui, la team s'est agrandie et compte une dizaine de membres. Leur activité principale s’exerce à travers leur association PRIMITIV avec laquelle ils organisent des évènements sur Paris et leur festival Ekotone dont la deuxième édition aura lieu du 23 au 25 mai prochain.
+
+Pour vous, ils remettent le maillot et comptent bien le mouiller pour vous faire vivre un after plus que torride !!
         </p>
         <img src={afterBTK.logo} alt="placeholder" className={styles.introImg} />
       </div>
