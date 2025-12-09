@@ -27,7 +27,7 @@ export default function Home() {
         <LogoGLFT />
       </div>
       <div className={styles.containerSlogan}>
-        <span className={styles.slogan}>Il est temps de nous retrouver.</span>
+        <span className={styles.slogan}>Il est temps de nous retrouver</span>
       </div>
       <div className={styles.containerDates}>
         <span className={styles.dates}>{datesText}</span>

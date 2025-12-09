@@ -66,7 +66,7 @@ export default function Navigation() {
             </div>
           </div>
           <div className={styles.containerNavSecondSection}>
-            <a className={styles.btnTickets} target='_blank' rel="noreferrer" href='https://www.helloasso.com/associations/la-viree/evenements/la-viree-festival-2025'>TICKETS</a>
+            <a className={styles.btnTickets} target='_blank' rel="noreferrer" href='https://www.helloasso.com/associations/la-viree/evenements/la-viree-festival-2025'>Prenez vos places ici</a>
           </div>
         </nav>
       </div>

@@ -9,7 +9,7 @@ const GLTFModel = () => {
   useEffect(() => {
     scene.traverse((child) => {
       if (child.isMesh) {
-        child.material.color.set('#ff80f5');
+        child.material.color.set('#0034CE');
       }
     });
   }, [scene]);

@@ -35,11 +35,6 @@ export const equipeData = [
     job: ['Scénographe'],
   },
   {
-    name: 'Constant',
-    image: '/images/equipe/constant.jpg',
-    job: ['Scénographe'],
-  },
-  {
     name: 'Charlotte',
     image: '/images/equipe/charlotte.jpg',
     job: ['Respo com'],

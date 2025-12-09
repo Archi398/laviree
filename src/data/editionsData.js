@@ -122,9 +122,9 @@ export const editionsData = [
   },
   {
     year: 2025,
-    legend: '27-28-29 JUIN 2025 - Chateau de Célon',
+    legend: '27-28-29 JUIN 2025 - Château de Célon',
     dates: ['27/06/2025', '28/06/2025', '29/06/2025'],
-    place: 'Chateau de Célon',
+    place: 'Château de Célon',
     images: [
 
     ],
