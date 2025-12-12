@@ -48,7 +48,7 @@ export default function Navigation() {
                 to={'/actualites'}
                 className={styles.navLink}
               >
-                <span>Actulités</span>
+                <span>Actualités</span>
               </NavLink>
               <span className={styles.dropdwonSeparator}>|</span>
               <Dropdown

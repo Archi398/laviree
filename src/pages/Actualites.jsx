@@ -16,7 +16,7 @@ const query = `
 }
 `;
 
-export default function Actulites() {
+export default function Actualites() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
