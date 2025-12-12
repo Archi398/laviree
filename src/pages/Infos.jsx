@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import InfoActuCard from '../components/organisms/InfoActuCard';
 import styles from '../styles/InfoActu.module.css';
@@ -171,9 +171,11 @@ export default function Infos() {
           </p>
         </div>)
     },
-  ]
+  ];
 
-
+  useEffect(() => {
+    document.title = 'LA VIRÉE | Infos Pratiques';
+  }, []);
 
   return (
     <div className={styles.container}>

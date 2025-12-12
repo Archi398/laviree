@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback, use } from 'react';
 import styles from '../styles/Exposition.module.css';
 import { artistesData } from '../data/artistesData';
 
@@ -10,6 +10,10 @@ export default function Exposition() {
   const numCircles = 1; // artistes.length;
   const [popup, setPopup] = useState({ visible: false, x: 0, y: 0, index: null });
   const hideTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    document.title = 'LA VIRÉE | Exposition';
+  }, []);
 
   const calculatePopupPosition = (rect) => {
     const sidePosition = rect.left < window.innerWidth / 2 ? 'left' : 'right';

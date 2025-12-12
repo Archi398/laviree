@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import Carousel from '../components/organisms/Carousel';
 import EmbedInsta from '../components/organisms/EmbedInsta';
@@ -10,8 +10,11 @@ import { afterData } from '../data/afterData';
 export default function After() {
   const currentArtist = 'BTK';
   const afterBTK = afterData.find((after) => after.artist === currentArtist);
-  console.log(afterBTK);
   const artistes = artistesData.filter((art) => art.group === currentArtist).sort((a, b) => a.name.localeCompare(b.name));
+
+  useEffect(() => {
+    document.title = 'LA VIRÉE | L\'after * BTK';
+  }, []);
 
   return (
     <div className={styles.container}>

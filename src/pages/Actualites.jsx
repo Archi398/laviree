@@ -24,8 +24,8 @@ export default function Actualites() {
   }, []);
 
   useEffect(() => {
-    console.log(posts);
-  }, [posts]);
+    document.title = 'LA VIRÉE | Actualités';
+  }, []);
 
 
   return (

@@ -16,6 +16,10 @@ export default function LineUp() {
   const cardContainerRef = useRef(null);
 
   useEffect(() => {
+    document.title = 'LA VIRÉE | Line Up';
+  }, []);
+
+  useEffect(() => {
     const paths = pathRefs.current.map(ref => ref.current);
     const pathLengths = paths.map(path => path.getTotalLength());
 

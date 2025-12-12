@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import Carousel from '../components/organisms/Carousel';
 import PinkCard from '../components/organisms/PinkCard';
@@ -10,6 +10,10 @@ import { artistesData } from '../data/artistesData';
 export default function Edition({ year }) {
   const edition = editionsData.find((ed) => ed.year === year);
   const artistes = artistesData.filter((art) => art.editions.includes(year));
+
+  useEffect(() => {
+    document.title = `LA VIRÉE | Édition ${year}`;
+  }, [year]);
 
   const renderSubTitle = (dates, place) => {
     const formattedDates = dates.map((date) => {

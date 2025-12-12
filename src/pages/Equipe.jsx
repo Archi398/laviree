@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import styles from '../styles/Equipe.module.css';
 import { equipeData, mentionspecialData } from '../data/equipeData';
@@ -7,6 +7,10 @@ export default function Equipe() {
   const [selectedPerson, setSelectedPerson] = useState(null);
   const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
   const hidePopupTimeout = useRef(null);
+
+  useEffect(() => {
+    document.title = 'LA VIRÉE | L\'équipe';
+  }, []);
 
   const handleMouseEnter = (person, event) => {
     if (hidePopupTimeout.current) {

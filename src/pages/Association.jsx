@@ -1,9 +1,13 @@
-import React from 'react';
+import { useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
 import PinkCard from '../components/organisms/PinkCard';
 import styles from '../styles/Association.module.css';
 
 export default function Association() {
+
+  useEffect(() => {
+    document.title = 'LA VIRÉE | L\'association';
+  }, []);
 
   return (
     <div className={styles.container}>
