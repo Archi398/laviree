@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import { editionsData } from '../data/editionsData';
 
 export default function Home() {
-  const edition = editionsData.find((ed) => ed.year === 2025);
+  const edition = editionsData.find((ed) => ed.year === 2026);
 
   const renderDatesText = (dates) => {
     const formattedDates = dates.map((date) => {

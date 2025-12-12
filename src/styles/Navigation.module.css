@@ -112,7 +112,7 @@
 }
 
 .dropdown.closing {
-  z-index: 3;
+  z-index: 5;
   transform: scaleY(0);
   transition: transform 0.5s ease-out, z-index 0.5s step-start;
 }

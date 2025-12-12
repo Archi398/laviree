@@ -5,8 +5,8 @@ import { editionsData } from '../data/editionsData';
 import { artistesData } from '../data/artistesData';
 
 export default function LineUp() {
-  const edition = editionsData.find((ed) => ed.year === 2025);
-  const artistes = artistesData.filter((art) => art.editions.includes(2025));
+  const edition = editionsData.find((ed) => ed.year === 2026);
+  const artistes = artistesData.filter((art) => art.editions.includes(2026));
   const nb_artistes = artistes.length; // 17 max
 
   const pathRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]);

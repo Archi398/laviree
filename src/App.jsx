@@ -37,6 +37,7 @@ function App() {
           <Route path="/court-metrages" element={<Exposition />} />
           <Route path="/after" element={<After />} />
           <Route path="/artistes" element={<Artistes />} />
+          <Route path="/edition/2025" element={<Edition year={2025} />} />
           <Route path="/edition/2023" element={<Edition year={2023} />} />
           <Route path="/edition/2022" element={<Edition year={2022} />} />
           <Route path="/edition/2021" element={<Edition year={2021} />} />

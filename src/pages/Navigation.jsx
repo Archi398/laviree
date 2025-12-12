@@ -12,12 +12,13 @@ export default function Navigation() {
     { path: '/infos', label: 'infos' },
     { path: '/actualites', label: 'actualités' },
     { path: '/line-up', label: 'line up' },
-    { path: '/courts-metrages', label: 'courts-métrages' },
+    // { path: '/courts-metrages', label: 'courts-métrages' },
     { path: '/after', label: 'l\'after • BTK' },
   ];
 
   const dropdownLinks2 = [
     { path: '/artistes', label: 'nos artistes' },
+    { path: '/edition/2025', label: 'édition 2025' },
     { path: '/edition/2023', label: 'édition 2023' },
     { path: '/edition/2022', label: 'édition 2022' },
     { path: '/edition/2021', label: 'édition 2021' },
@@ -43,8 +44,15 @@ export default function Navigation() {
               </NavLink> 
             </div>
             <div className={styles.containerNavRightSection}>
+              <NavLink
+                to={'/actualites'}
+                className={styles.navLink}
+              >
+                <span>Actulités</span>
+              </NavLink>
+              <span className={styles.dropdwonSeparator}>|</span>
               <Dropdown
-                label="Édition 2025"
+                label="Édition 2026"
                 links={dropdownLinks1}
                 visible={dropdownVisible}
                 toggleDropdown={setDropdownVisible}
@@ -66,7 +74,7 @@ export default function Navigation() {
             </div>
           </div>
           <div className={styles.containerNavSecondSection}>
-            <a className={styles.btnTickets} target='_blank' rel="noreferrer" href='https://www.helloasso.com/associations/la-viree/evenements/la-viree-festival-2025'>Prenez vos places ici</a>
+            <a className={styles.btnTickets} target='_blank' rel="noreferrer" href='https://www.helloasso.com/associations/la-viree/evenements/la-viree-v-places-ultra-early-2026'>Prenez vos places ici</a>
           </div>
         </nav>
       </div>
@@ -94,7 +102,7 @@ export default function Navigation() {
           </svg>
         </a>
         {/* SPOTIFY */}
-        <a className={styles.btnSocialNetworks} target='_blank' rel="noreferrer" href='https://open.spotify.com/playlist/7aZDjKozUcB2L7f5qryblP?si=anlr1GIhSrSqMSXQ3nZCCg'>
+        <a className={styles.btnSocialNetworks} target='_blank' rel="noreferrer" href='https://open.spotify.com/playlist/0cadBvxglt3QrA4kVHkQ0S'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
             {/* !Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. */}
             <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z" />

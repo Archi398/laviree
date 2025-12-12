@@ -6,8 +6,18 @@
   padding: 160px 5% 15% 5%;
 }
 
+.article {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.article h1 {
+  font-family: 'VIREE', sans-serif;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 17vh 11% 5% 11%;
   }
+
 }

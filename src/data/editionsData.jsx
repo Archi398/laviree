@@ -129,4 +129,13 @@ export const editionsData = [
 
     ],
   },
+  {
+    year: 2026,
+    legend: '12-13-14 JUIN 2026 - Château de Célon',
+    dates: ['12/06/2026', '13/06/2026', '14/06/2026'],
+    place: 'Château de Célon',
+    images: [
+
+    ],
+  },
 ]

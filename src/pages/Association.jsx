@@ -19,7 +19,7 @@ export default function Association() {
           <br />
           Il est temps de nous retrouver.
         </p>
-        <img src="/images/logo3D.png" alt="placeholder" className={styles.introImg} />
+        <img src="/images/newlogo.png" alt="placeholder" className={styles.introImg} />
       </div>
       <PinkCard
         type="association"
