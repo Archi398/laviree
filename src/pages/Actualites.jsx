@@ -35,9 +35,9 @@ export default function Actualites() {
       {posts.map((post) => (
         <article key={post._id} className={styles.article}>
           <h1>{post.title}</h1>
+          <img src={urlFor(post.coverImage).url()} />
           {/* <p>{new Date(post.publishedAt).toLocaleDateString()}</p> */}
           <PortableText value={post.content} />
-          {/* <img src={urlFor(post.coverImage).width(50).url()} /> */}
         </article>
       ))}
     </div>

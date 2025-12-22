@@ -11,6 +11,11 @@
   margin-bottom: 40px;
 }
 
+img {
+  width: 250px;
+  height: auto;
+}
+
 .article h1 {
   font-family: 'VIREE', sans-serif;
 }
