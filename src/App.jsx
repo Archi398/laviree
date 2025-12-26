@@ -13,6 +13,7 @@ import Artistes from './pages/Artistes';
 import Edition from './pages/Edition';
 import Association from './pages/Association';
 import Equipe from './pages/Equipe';
+import CharteBienveillance from './pages/CharteBienveillance';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,6 +44,7 @@ function App() {
           <Route path="/edition/2021" element={<Edition year={2021} />} />
           <Route path="/association" element={<Association />} />
           <Route path="/equipe" element={<Equipe />} />
+          <Route path="/charte-de-bienveillance" element={<CharteBienveillance />} />
         </Route>
       </Routes>
     </div>

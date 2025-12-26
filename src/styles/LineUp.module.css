@@ -4,7 +4,6 @@
 
 .allContainer {
   position: relative;
-  height: 3000px;
   background-color: black;
 }
 
@@ -40,8 +39,22 @@
   perspective: 1000px;
 }
 
+.WIPContainer {
+  margin-top: 20%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.WIPText {
+  font-family: 'VIREE', sans-serif;
+  text-align: center;
+  color: white;
+}
+
 .cardContainer {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,5 +114,9 @@
 
   .cardContainer {
     padding: 0 11% 5% 11%;
+  }
+
+  .WIPContainer {
+    margin-top: 0;
   }
 }

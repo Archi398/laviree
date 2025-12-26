@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import TitlePage from '../components/atoms/TitlePage';
-import PinkCard from '../components/organisms/PinkCard';
 import styles from '../styles/Association.module.css';
 
 export default function Association() {
@@ -25,11 +24,6 @@ export default function Association() {
         </p>
         <img src="/images/newlogo.png" alt="placeholder" className={styles.introImg} />
       </div>
-      <PinkCard
-        type="association"
-        title="CHARTE DE BIENVEILLANCE"
-        description=""
-      />
     </div>
   );
 }

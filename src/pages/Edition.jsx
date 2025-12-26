@@ -50,7 +50,7 @@ export default function Edition({ year }) {
             </a>
           </p>
           <h2>
-            Line up
+            Line-up
           </h2>
           <p>
             * +++ : Indie Rock <br />

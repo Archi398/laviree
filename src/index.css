@@ -14,7 +14,7 @@
 }
 
 :root {
-  --pink-viree: #0034CE;
+  --color-viree: #0034CE;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 }
 
 .slick-prev:before, .slick-next:before {
-  color: var(--pink-viree) !important;
+  color: var(--color-viree) !important;
 }
 
 .slick-prev {

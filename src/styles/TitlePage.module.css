@@ -7,14 +7,14 @@
 
 .title {
   font-family: 'VIREE', sans-serif;
-  color: var(--pink-viree);
+  color: var(--color-viree);
   font-size: 1.8rem;
   margin: 0;
   text-transform: uppercase;
 }
 
 .subTitle{
-  color: var(--pink-viree);
+  color: var(--color-viree);
   font-size: 1.2rem;
   margin: 0;
   text-transform: uppercase;

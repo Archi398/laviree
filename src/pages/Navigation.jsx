@@ -11,21 +11,22 @@ export default function Navigation() {
   const dropdownLinks1 = [
     { path: '/infos', label: 'infos' },
     { path: '/actualites', label: 'actualités' },
-    { path: '/line-up', label: 'line up' },
+    { path: '/line-up', label: 'line-up' },
     // { path: '/courts-metrages', label: 'courts-métrages' },
     { path: '/after', label: 'l\'after • BTK' },
   ];
 
   const dropdownLinks2 = [
     { path: '/artistes', label: 'nos artistes' },
-    { path: '/edition/2025', label: 'édition 2025' },
-    { path: '/edition/2023', label: 'édition 2023' },
-    { path: '/edition/2022', label: 'édition 2022' },
-    { path: '/edition/2021', label: 'édition 2021' },
+    { path: '/edition/2025', label: '2025' },
+    { path: '/edition/2023', label: '2023' },
+    { path: '/edition/2022', label: '2022' },
+    { path: '/edition/2021', label: '2021' },
   ];
 
   const dropdownLinks3 = [
     { path: '/association', label: 'l\'association' },
+    { path: '/charte-de-bienveillance', label: 'charte de bienveillance' },
     { path: '/equipe', label: 'l\'équipe' },
   ];
 
@@ -66,7 +67,7 @@ export default function Navigation() {
               />
               <span className={styles.dropdwonSeparator}>|</span>
               <Dropdown
-                label=" Qui sommes nous?"
+                label=" Qui sommes-nous?"
                 links={dropdownLinks3}
                 visible={dropdownVisible3}
                 toggleDropdown={setDropdownVisible3}

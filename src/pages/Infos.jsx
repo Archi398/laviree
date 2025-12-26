@@ -27,6 +27,12 @@ export default function Infos() {
             Gare d'Argenton sur Creuse (direct depuis Paris) <br />
             Navette gratuite le vendredi et le dimanche —10mn
           </p>
+          <h2>
+            Car
+          </h2>
+          <p>
+            Informations à venir  👀
+          </p>
         </div>
       ),
       infos: (
@@ -62,7 +68,7 @@ export default function Infos() {
             Stands
           </h2>
           <p>
-            Friperie, jeux de société, artistes... à venir découvrir
+            Activités, friperie, artistes… à venir découvrir
           </p>
         </div>
       ),
@@ -72,6 +78,27 @@ export default function Infos() {
             Le bar
           </h1>
           <p>
+            <span className={styles.dotLeaders}>
+              <span>Blonde (25cL)</span>
+              <span className={styles.dots}></span>
+              <span>2,5€</span>
+            </span>
+            <span className={styles.dotLeaders}>
+              <span>IPA (25cL)</span>
+              <span className={styles.dots}></span>
+              <span>3€</span>
+            </span>
+            <br />
+            <span className={styles.dotLeaders}>
+              <span>Jus de fruit</span>
+              <span className={styles.dots}></span>
+              <span>2€</span>
+            </span>
+            <span className={styles.dotLeaders}>
+              <span>Soda</span>
+              <span className={styles.dots}></span>
+              <span>2€</span>
+            </span>
             <span className={styles.dotLeaders}>
               <span>Café</span>
               <span className={styles.dots}></span>
@@ -88,16 +115,7 @@ export default function Infos() {
               <span>0€</span>
             </span>
             <br />
-            <span className={styles.dotLeaders}>
-              <span>Blonde (25cL)</span>
-              <span className={styles.dots}></span>
-              <span>2,5€</span>
-            </span>
-            <span className={styles.dotLeaders}>
-              <span>IPA (25cL)</span>
-              <span className={styles.dots}></span>
-              <span>3€</span>
-            </span>
+            
           </p>
         </div>
       )
@@ -129,8 +147,8 @@ export default function Infos() {
             Ouverture
           </h1>
           <p>
-            Vendredi 27 juin à 16h <br />
-            Dimanche 29 juin à 17h
+            Du vendredi 12 juin à 16h <br />
+            Au lundi 15 juin à 13h
           </p>
         </div>
       )

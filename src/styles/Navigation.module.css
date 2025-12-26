@@ -45,26 +45,26 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--pink-viree);
+  color: var(--color-viree);
   z-index: -1;
   transform: translate(10px, 10px);
   text-shadow:
-    -1px -1px 0 var(--pink-viree),
-    -2px -2px 0 var(--pink-viree),
-    -3px -3px 0 var(--pink-viree),
-    -4px -4px 0 var(--pink-viree),
-    -5px -5px 0 var(--pink-viree),
-    -6px -6px 0 var(--pink-viree),
-    -7px -7px 0 var(--pink-viree),
-    -8px -8px 0 var(--pink-viree),
-    -9px -9px 0 var(--pink-viree),
-    -10px -10px 0 var(--pink-viree);
+    -1px -1px 0 var(--color-viree),
+    -2px -2px 0 var(--color-viree),
+    -3px -3px 0 var(--color-viree),
+    -4px -4px 0 var(--color-viree),
+    -5px -5px 0 var(--color-viree),
+    -6px -6px 0 var(--color-viree),
+    -7px -7px 0 var(--color-viree),
+    -8px -8px 0 var(--color-viree),
+    -9px -9px 0 var(--color-viree),
+    -10px -10px 0 var(--color-viree);
 }
 
 .subtitle {
   font-size: 1rem;
   font-style: italic;
-  color: var(--pink-viree);
+  color: var(--color-viree);
   font-weight: 200;
   margin: 0;
 }
@@ -79,7 +79,7 @@
 
 .dropdwonSeparator {
   display: none;
-  color: var(--pink-viree);
+  color: var(--color-viree);
 }
 
 .dropdownContainer {
@@ -120,7 +120,7 @@
 .navLink {
   text-decoration: none;
   text-wrap: nowrap;
-  color: var(--pink-viree);
+  color: var(--color-viree);
   font-size: 1rem;
 }
 
@@ -135,7 +135,7 @@
 
 .navLink:hover,
 .navLinkDropdown:hover {
-  color: var(--pink-viree);
+  color: var(--color-viree);
   transition: 0.7s;
 }
 
@@ -143,7 +143,7 @@
   position: absolute;
   right: auto;
   top: 7px;
-  background-color: var(--pink-viree);
+  background-color: var(--color-viree);
   border: 1px white solid;
   border-radius: 5px;
   color: white;
@@ -170,7 +170,7 @@
 }
 
 .btnSocialNetworks {
-  background-color: var(--pink-viree);
+  background-color: var(--color-viree);
   border-radius: 50%;
   height: 40px;
   width: 40px;

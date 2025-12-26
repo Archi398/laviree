@@ -5,7 +5,7 @@ import styles from '../styles/Artistes.module.css';
 import { artistesData } from '../data/artistesData';
 
 export default function Artistes() {
-  const artistes = artistesData.sort((a, b) => a.name.localeCompare(b.name));
+  const artistes = artistesData.filter(artiste => artiste.type === 'musique').sort((a, b) => a.name.localeCompare(b.name));
 
   useEffect(() => {
     document.title = 'LA VIRÉE | Artistes';
